@@ -5,7 +5,7 @@ export default [
         description: "Survived Day 1 easily but got destroyed on Day 3? You likely fell into the 'Economy Trap'. Here are 5 early mistakes that ruin your Hellmart run.",
         tags: ["Beginner Guide", "Survival Tips", "Strategy", "Mistakes"],
         publishDate: "2026-02-05",
-        imageUrl: "/images/blog/hellmart-day3-power-outage.jpg", // 建议放一张手电筒照着黑暗走廊的截图
+        imageUrl: "/images/blog/blog01.webp", // 建议放一张手电筒照着黑暗走廊的截图
         imageAlt: "Hellmart gameplay showing player using flashlight during a power outage",
         isHome: true,
         seo: {
