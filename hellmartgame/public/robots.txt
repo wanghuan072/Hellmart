@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hellmartgame.com/sitemap.xml
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /api/
+
+# Disallow Legal pages from being crawled
+Disallow: /privacy-policy
+Disallow: /terms-of-service
+Disallow: /copyright
+Disallow: /about-us
+Disallow: /contact-us
+
+# Google-specific rules
+User-agent: Googlebot
+Disallow: /privacy-policy
+Disallow: /terms-of-service
+Disallow: /copyright
+Disallow: /about-us
+Disallow: /contact-us
+
