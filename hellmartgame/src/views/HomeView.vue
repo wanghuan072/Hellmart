@@ -90,7 +90,7 @@
           <div class="card ending-card">
             <div class="card-image">
               <div class="ending-badge bad">BAD</div>
-              <img src="/images/endings-02.webp" alt="Ending 2: Groundhog Day">
+              <img src="/images/endings-01.webp" alt="Ending 2: Groundhog Day">
             </div>
             <div class="card-content">
               <h3 class="card-title">Ending: Groundhog Day</h3>
@@ -100,7 +100,7 @@
           <div class="card ending-card">
             <div class="card-image">
               <div class="ending-badge neutral">EVIL</div>
-              <img src="/images/endings-01.webp" alt="Ending 3: Judgment Night">
+              <img src="/images/endings-02.webp" alt="Ending 3: Judgment Night">
             </div>
             <div class="card-content">
               <h3 class="card-title">Ending: Judgment Night</h3>
