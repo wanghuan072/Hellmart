@@ -2,8 +2,8 @@
   <div class="legal-page">
     <div class="hero-page">
       <div class="container">
-        <h1>Copyright</h1>
-        <p>Official Legal Document • Effective Date: {{ currentDate }}</p>
+        <h1>{{ t('copyrightPage.hero.title') }}</h1>
+        <p>{{ t('copyrightPage.hero.subtitle') }} {{ currentDate }}</p>
       </div>
     </div>
 
@@ -11,41 +11,41 @@
       <div class="container">
         <div class="content-wrapper">
           <div class="legal-text">
-            <h2>Copyright Notice</h2>
+            <h2>{{ t('copyrightPage.sections.notice.title') }}</h2>
             <p>
-              © {{ currentYear }} Hellmart Game. All rights reserved. This website and its content are protected by copyright laws.
+              {{ t('copyrightPage.sections.notice.text') }} {{ currentYear }} {{ t('copyrightPage.sections.notice.textEnd') }}
             </p>
 
-            <h2>Ownership</h2>
+            <h2>{{ t('copyrightPage.sections.ownership.title') }}</h2>
             <p>
-              All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Hellmart Game or its content suppliers and is protected by international copyright laws.
+              {{ t('copyrightPage.sections.ownership.text') }}
             </p>
 
-            <h2>Trademark Notice</h2>
+            <h2>{{ t('copyrightPage.sections.trademark.title') }}</h2>
             <p>
-              Hellmart is a trademark of Hellmart Game. All references to Hellmart and related trademarks are owned by Hellmart Game.
+              {{ t('copyrightPage.sections.trademark.text') }}
             </p>
 
-            <h2>User-Generated Content</h2>
+            <h2>{{ t('copyrightPage.sections.userGenerated.title') }}</h2>
             <p>
-              Users who submit content to our website retain ownership of their original content but grant Hellmart Game a license to use, display, and distribute that content on our website.
+              {{ t('copyrightPage.sections.userGenerated.text') }}
             </p>
 
-            <h2>DMCA Policy</h2>
+            <h2>{{ t('copyrightPage.sections.dmca.title') }}</h2>
             <p>
-              If you believe that any content on our website infringes your copyright, please contact us at <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a> with the following information:
+              {{ t('copyrightPage.sections.dmca.text') }} <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a> {{ t('copyrightPage.sections.dmca.textEnd') }}
             </p>
             <ul>
-              <li>Your contact information</li>
-              <li>A description of the copyrighted work you claim has been infringed</li>
-              <li>The location of the allegedly infringing material on our website</li>
-              <li>A statement that you have a good faith belief that the use is not authorized</li>
-              <li>A statement that the information in your notice is accurate</li>
+              <li>{{ t('copyrightPage.sections.dmca.item1') }}</li>
+              <li>{{ t('copyrightPage.sections.dmca.item2') }}</li>
+              <li>{{ t('copyrightPage.sections.dmca.item3') }}</li>
+              <li>{{ t('copyrightPage.sections.dmca.item4') }}</li>
+              <li>{{ t('copyrightPage.sections.dmca.item5') }}</li>
             </ul>
 
-            <h2>Contact Us</h2>
+            <h2>{{ t('copyrightPage.sections.contact.title') }}</h2>
             <p>
-              For copyright-related inquiries, please contact us at <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a>.
+              {{ t('copyrightPage.sections.contact.text') }} <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a>.
             </p>
           </div>
         </div>
@@ -55,24 +55,16 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const currentDate = 'February 3, 2026'
 
 const currentYear = computed(() => {
   return new Date().getFullYear()
 })
 
-onMounted(() => {
-  document.title = 'Copyright - Hellmart Game'
-  let metaDesc = document.querySelector('meta[name="description"]')
-  if (!metaDesc) {
-    metaDesc = document.createElement('meta')
-    metaDesc.name = "description"
-    document.head.appendChild(metaDesc)
-  }
-  metaDesc.content = 'Copyright information for Hellmart Game. Learn about our copyright policies and intellectual property rights.'
-})
 </script>
 
 <style scoped>

@@ -2,8 +2,8 @@
   <main class="wiki-page">
     <div class="hero-page">
       <div class="container">
-        <h1 class="hero-title">Hellmart Entity Database: All Characters, Monsters & Anomalies</h1>
-        <p class="subtitle">The ultimate identification guide for the night shift. Learn who is Safe, who is Dangerous, and exactly what happens if you let them in.</p>
+        <h1 class="hero-title">{{ t('wikiPage.hero.title') }}</h1>
+        <p class="subtitle">{{ t('wikiPage.hero.subtitle') }}</p>
       </div>
     </div>
 
@@ -12,20 +12,20 @@
         <!-- Left Sidebar: Table of Contents -->
         <aside class="wiki-sidebar">
           <nav class="toc">
-            <h2 class="toc-title">Directory</h2>
+            <h2 class="toc-title">{{ t('wikiPage.toc.title') }}</h2>
             <ul class="toc-list">
-              <li class="toc-item"><a href="#golden-rules" :class="['toc-link', { active: activeTopSection === 'golden-rules' }]" @click.prevent="scrollToSection('golden-rules')">1. Golden Rules</a></li>
+              <li class="toc-item"><a href="#golden-rules" :class="['toc-link', { active: activeTopSection === 'golden-rules' }]" @click.prevent="scrollToSection('golden-rules')">{{ t('wikiPage.toc.item1') }}</a></li>
               <li class="toc-item">
-                <a href="#all-characters" :class="['toc-link', { active: activeTopSection === 'all-characters' }]" @click.prevent="scrollToSection('all-characters')">2. All Characters</a>
+                <a href="#all-characters" :class="['toc-link', { active: activeTopSection === 'all-characters' }]" @click.prevent="scrollToSection('all-characters')">{{ t('wikiPage.toc.item2') }}</a>
                 <ul class="toc-sublist">
-                  <li><a href="#core-characters" :class="['toc-sublink', { active: activeSection === 'core-characters' }]" @click.prevent="scrollToSection('core-characters')">Core / Story Characters</a></li>
-                  <li><a href="#regulars-day" :class="['toc-sublink', { active: activeSection === 'regulars-day' }]" @click.prevent="scrollToSection('regulars-day')">The Regulars (Daytime)</a></li>
-                  <li><a href="#night-visitors" :class="['toc-sublink', { active: activeSection === 'night-visitors' }]" @click.prevent="scrollToSection('night-visitors')">Night Visitors</a></li>
-                  <li><a href="#entities-anomalies" :class="['toc-sublink', { active: activeSection === 'entities-anomalies' }]" @click.prevent="scrollToSection('entities-anomalies')">Entities / Anomalies</a></li>
+                  <li><a href="#core-characters" :class="['toc-sublink', { active: activeSection === 'core-characters' }]" @click.prevent="scrollToSection('core-characters')">{{ t('wikiPage.toc.item2Sub1') }}</a></li>
+                  <li><a href="#regulars-day" :class="['toc-sublink', { active: activeSection === 'regulars-day' }]" @click.prevent="scrollToSection('regulars-day')">{{ t('wikiPage.toc.item2Sub2') }}</a></li>
+                  <li><a href="#night-visitors" :class="['toc-sublink', { active: activeSection === 'night-visitors' }]" @click.prevent="scrollToSection('night-visitors')">{{ t('wikiPage.toc.item2Sub3') }}</a></li>
+                  <li><a href="#entities-anomalies" :class="['toc-sublink', { active: activeSection === 'entities-anomalies' }]" @click.prevent="scrollToSection('entities-anomalies')">{{ t('wikiPage.toc.item2Sub4') }}</a></li>
                 </ul>
               </li>
-              <li class="toc-item"><a href="#special-events" :class="['toc-link', { active: activeTopSection === 'special-events' }]" @click.prevent="scrollToSection('special-events')">3. Game Modes & Events</a></li>
-              <li class="toc-item"><a href="#faq" :class="['toc-link', { active: activeTopSection === 'faq' }]" @click.prevent="scrollToSection('faq')">4. FAQ</a></li>
+              <li class="toc-item"><a href="#special-events" :class="['toc-link', { active: activeTopSection === 'special-events' }]" @click.prevent="scrollToSection('special-events')">{{ t('wikiPage.toc.item3') }}</a></li>
+              <li class="toc-item"><a href="#faq" :class="['toc-link', { active: activeTopSection === 'faq' }]" @click.prevent="scrollToSection('faq')">{{ t('wikiPage.toc.item4') }}</a></li>
             </ul>
           </nav>
         </aside>
@@ -34,28 +34,28 @@
         <div class="wiki-content">
           <!-- Part 1: Golden Rules -->
           <section id="golden-rules" class="wiki-section">
-            <h2 class="section-title">The 3 Golden Rules</h2>
-            <p class="section-intro">Applicable primarily during the <strong>Night Shift</strong>. Trust your equipment over your eyes.</p>
+            <h2 class="section-title">{{ t('wikiPage.goldenRules.title') }}</h2>
+            <p class="section-intro">{{ t('wikiPage.goldenRules.intro') }} <strong>{{ t('wikiPage.goldenRules.introBold') }}</strong>{{ t('wikiPage.goldenRules.introEnd') }}</p>
             <div class="rules-list">
               <div class="rule-row">
                 <div class="rule-number">01</div>
                 <div class="rule-content">
-                  <h3 class="rule-title">CCTV First</h3>
-                  <p class="rule-desc">When someone knocks at night, check CCTV first. Flickering or interference usually signals danger—deny entry.</p>
+                  <h3 class="rule-title">{{ t('wikiPage.goldenRules.rule1.title') }}</h3>
+                  <p class="rule-desc">{{ t('wikiPage.goldenRules.rule1.desc') }}</p>
                 </div>
               </div>
               <div class="rule-row">
                 <div class="rule-number">02</div>
                 <div class="rule-content">
-                  <h3 class="rule-title">Don’t Judge by Looks</h3>
-                  <p class="rule-desc">Some scary-looking customers are honest payers. Tiny Bob and the Faceless Customer are usually safe—serve them normally.</p>
+                  <h3 class="rule-title">{{ t('wikiPage.goldenRules.rule2.title') }}</h3>
+                  <p class="rule-desc">{{ t('wikiPage.goldenRules.rule2.desc') }}</p>
                 </div>
               </div>
               <div class="rule-row">
                 <div class="rule-number">03</div>
                 <div class="rule-content">
-                  <h3 class="rule-title">Cleaning Is Defense</h3>
-                  <p class="rule-desc">Blood, meat piles, and puke attract flies and more anomalies. Keep floors and walls clean to reduce risks and keep customers calm.</p>
+                  <h3 class="rule-title">{{ t('wikiPage.goldenRules.rule3.title') }}</h3>
+                  <p class="rule-desc">{{ t('wikiPage.goldenRules.rule3.desc') }}</p>
                 </div>
               </div>
             </div>
@@ -63,27 +63,27 @@
 
           <!-- Part 2: All Characters -->
           <section id="all-characters" class="wiki-section">
-            <h2 class="section-title">All Characters</h2>
+            <h2 class="section-title">{{ t('wikiPage.characters.title') }}</h2>
             <!-- Core / Story Characters -->
             <div id="core-characters" class="wiki-subsection">
-              <h3 class="subsection-title">Core / Story Characters</h3>
+              <h3 class="subsection-title">{{ t('wikiPage.characters.core.title') }}</h3>
               <div class="entity-list">
                 <div class="entity-card special">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Helluser (Player)</h3>
-                      <span class="status-badge purple">CORE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.core.player.name') }}</h3>
+                      <span class="status-badge purple">{{ t('wikiPage.characters.core.player.badge') }}</span>
                     </div>
-                    <p class="info-text">The protagonist; Hellmart’s new employee.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.core.player.text') }}</p>
                   </div>
                 </div>
                 <div class="entity-card special">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">The Boss</h3>
-                      <span class="status-badge purple">LORE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.core.boss.name') }}</h3>
+                      <span class="status-badge purple">{{ t('wikiPage.characters.core.boss.badge') }}</span>
                     </div>
-                    <p class="info-text">Only heard via the Phone Booth in the morning. Tasks escalate from encouraging to threatening. Key line: “Fear keeps you alive.”</p>
+                    <p class="info-text">{{ t('wikiPage.characters.core.boss.text') }}</p>
                   </div>
                 </div>
                 <div class="entity-card safe">
@@ -92,10 +92,10 @@
                   </div>
                   <div class="entity-info">
                     <div class="entity-header">
-                      <h3 class="entity-name">The Stranger</h3>
-                      <span class="status-badge purple">LORE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.core.stranger.name') }}</h3>
+                      <span class="status-badge purple">{{ t('wikiPage.characters.core.stranger.badge') }}</span>
                     </div>
-                    <p class="info-text">Antagonist in green raincoat/robe with a horror mask. Tries to recruit you (“Join the family”). Refusing and holding out leads toward the good ending.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.core.stranger.text') }}</p>
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@
 
             <!-- The Regulars (Daytime) -->
             <div id="regulars-day" class="wiki-subsection">
-              <h3 class="subsection-title">The Regulars (Daytime)</h3>
+              <h3 class="subsection-title">{{ t('wikiPage.characters.regulars.title') }}</h3>
               <div class="entity-list">
                 <!-- Karen -->
                 <div class="entity-card safe">
@@ -112,16 +112,16 @@
                   </div>
                   <div class="entity-info">
                     <div class="entity-header">
-                      <h3 class="entity-name">Karen</h3>
-                      <span class="status-badge green">SAFE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.regulars.karen.name') }}</h3>
+                      <span class="status-badge green">{{ t('wikiPage.characters.regulars.karen.badge') }}</span>
                     </div>
                     <div class="info-group">
-                      <strong class="info-label">Behavior:</strong>
-                      <p class="info-text">Extremely picky. If the store is dirty (puke/dirt), she may refuse to pay and cause a scene.</p>
+                      <strong class="info-label">{{ t('wikiPage.characters.regulars.karen.behavior') }}</strong>
+                      <p class="info-text">{{ t('wikiPage.characters.regulars.karen.text') }}</p>
                     </div>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value green">LET IN</span>
+                      <span class="action-label">{{ t('wikiPage.characters.regulars.karen.protocol') }}</span>
+                      <span class="action-value green">{{ t('wikiPage.characters.regulars.karen.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -133,13 +133,13 @@
                   </div>
                   <div class="entity-info">
                     <div class="entity-header">
-                      <h3 class="entity-name">Old Lady</h3>
-                      <span class="status-badge yellow">WATCH</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.regulars.oldLady.name') }}</h3>
+                      <span class="status-badge yellow">{{ t('wikiPage.characters.regulars.oldLady.badge') }}</span>
                     </div>
-                    <p class="info-text">Wears purple/red hat, rambling speech. Mentions forgetting her knife and threatens to cut someone’s face.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.regulars.oldLady.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value yellow">LET IN & WATCH</span>
+                      <span class="action-label">{{ t('wikiPage.characters.regulars.oldLady.protocol') }}</span>
+                      <span class="action-value yellow">{{ t('wikiPage.characters.regulars.oldLady.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -148,13 +148,13 @@
                 <div class="entity-card safe">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Tiny Bob (Day)</h3>
-                      <span class="status-badge green">SAFE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.regulars.tinyBobDay.name') }}</h3>
+                      <span class="status-badge green">{{ t('wikiPage.characters.regulars.tinyBobDay.badge') }}</span>
                     </div>
-                    <p class="info-text">Extremely tall, quiet man. Despite the scary appearance, commonly considered “good”.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.regulars.tinyBobDay.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value green">LET IN</span>
+                      <span class="action-label">{{ t('wikiPage.characters.regulars.tinyBobDay.protocol') }}</span>
+                      <span class="action-value green">{{ t('wikiPage.characters.regulars.tinyBobDay.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -163,13 +163,13 @@
                 <div class="entity-card warning">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">The Coin Toss Man</h3>
-                      <span class="status-badge yellow">WATCH</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.regulars.coinToss.name') }}</h3>
+                      <span class="status-badge yellow">{{ t('wikiPage.characters.regulars.coinToss.badge') }}</span>
                     </div>
-                    <p class="info-text">Mushroom-style haircut, leather jacket. Invites you to guess heads or tails and hands you a “Lucky Quarter”.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.regulars.coinToss.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value yellow">LET IN & WATCH</span>
+                      <span class="action-label">{{ t('wikiPage.characters.regulars.coinToss.protocol') }}</span>
+                      <span class="action-value yellow">{{ t('wikiPage.characters.regulars.coinToss.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -178,13 +178,13 @@
                 <div class="entity-card warning">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Boozer (Day)</h3>
-                      <span class="status-badge yellow">WATCH</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.regulars.boozerDay.name') }}</h3>
+                      <span class="status-badge yellow">{{ t('wikiPage.characters.regulars.boozerDay.badge') }}</span>
                     </div>
-                    <p class="info-text">Green jacket, dark eye circles. Tries to drink inside or not pay. Highly unstable.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.regulars.boozerDay.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value yellow">LET IN & WATCH</span>
+                      <span class="action-label">{{ t('wikiPage.characters.regulars.boozerDay.protocol') }}</span>
+                      <span class="action-value yellow">{{ t('wikiPage.characters.regulars.boozerDay.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -193,13 +193,13 @@
                 <div class="entity-card warning">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Suspicious Customer</h3>
-                      <span class="status-badge yellow">WATCH</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.regulars.suspicious.name') }}</h3>
+                      <span class="status-badge yellow">{{ t('wikiPage.characters.regulars.suspicious.badge') }}</span>
                     </div>
-                    <p class="info-text">Wears hoodie, avoids showing face, acts shifty.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.regulars.suspicious.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value yellow">LET IN & WATCH</span>
+                      <span class="action-label">{{ t('wikiPage.characters.regulars.suspicious.protocol') }}</span>
+                      <span class="action-value yellow">{{ t('wikiPage.characters.regulars.suspicious.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -208,13 +208,13 @@
                 <div class="entity-card anomaly">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Faceless Customer</h3>
-                      <span class="status-badge green">SAFE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.regulars.faceless.name') }}</h3>
+                      <span class="status-badge green">{{ t('wikiPage.characters.regulars.faceless.badge') }}</span>
                     </div>
-                    <p class="info-text">A blank, flesh-colored face. Despite appearances, he’s a regular daytime customer—checkout normally.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.regulars.faceless.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value green">LET IN</span>
+                      <span class="action-label">{{ t('wikiPage.characters.regulars.faceless.protocol') }}</span>
+                      <span class="action-value green">{{ t('wikiPage.characters.regulars.faceless.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -223,19 +223,19 @@
 
             <!-- Night Visitors -->
             <div id="night-visitors" class="wiki-subsection">
-              <h3 class="subsection-title">Night Visitors</h3>
+              <h3 class="subsection-title">{{ t('wikiPage.characters.night.title') }}</h3>
               <div class="entity-list">
                 <!-- Colin -->
                 <div class="entity-card safe">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Colin</h3>
-                      <span class="status-badge green">SAFE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.night.colin.name') }}</h3>
+                      <span class="status-badge green">{{ t('wikiPage.characters.night.colin.badge') }}</span>
                     </div>
-                    <p class="info-text">Claims to be a local who missed the last bus. Generally considered safe if let in.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.night.colin.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value green">LET IN</span>
+                      <span class="action-label">{{ t('wikiPage.characters.night.colin.protocol') }}</span>
+                      <span class="action-value green">{{ t('wikiPage.characters.night.colin.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -247,20 +247,20 @@
                   </div> -->
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">The Smiling Woman</h3>
-                      <span class="status-badge red">ANOMALY</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.night.smilingWoman.name') }}</h3>
+                      <span class="status-badge red">{{ t('wikiPage.characters.night.smilingWoman.badge') }}</span>
                     </div>
                     <div class="info-group">
-                      <strong class="info-label">Appearance:</strong>
-                      <p class="info-text">Woman pressing face against glass. Unnaturally wide "Skibidi" smile showing gums.</p>
+                      <strong class="info-label">{{ t('wikiPage.characters.night.smilingWoman.appearance') }}</strong>
+                      <p class="info-text">{{ t('wikiPage.characters.night.smilingWoman.appearanceText') }}</p>
                     </div>
                     <div class="info-group">
-                      <strong class="info-label">The Trap:</strong>
-                      <p class="info-text">Uses psychological manipulation. "I am not outside. YOU are outside." Do not open the door.</p>
+                      <strong class="info-label">{{ t('wikiPage.characters.night.smilingWoman.trap') }}</strong>
+                      <p class="info-text">{{ t('wikiPage.characters.night.smilingWoman.trapText') }}</p>
                     </div>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value red">DENY & CLOSE BLINDS</span>
+                      <span class="action-label">{{ t('wikiPage.characters.night.smilingWoman.protocol') }}</span>
+                      <span class="action-value red">{{ t('wikiPage.characters.night.smilingWoman.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -272,23 +272,23 @@
                   </div> -->
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Father Grayson</h3>
-                      <span class="status-badge red">ANOMALY</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.night.fatherGrayson.name') }}</h3>
+                      <span class="status-badge red">{{ t('wikiPage.characters.night.fatherGrayson.badge') }}</span>
                     </div>
                     <div class="info-group">
-                      <strong class="info-label">Appearance:</strong>
-                      <p class="info-text">Elderly man in priest outfit. Speaks calmly, asks for "donation".</p>
+                      <strong class="info-label">{{ t('wikiPage.characters.night.fatherGrayson.appearance') }}</strong>
+                      <p class="info-text">{{ t('wikiPage.characters.night.fatherGrayson.appearanceText') }}</p>
                     </div>
                     <div class="info-group">
-                      <strong class="info-label">Identification:</strong>
+                      <strong class="info-label">{{ t('wikiPage.characters.night.fatherGrayson.identification') }}</strong>
                       <ul class="bullet-list">
-                        <li>Spelling errors (e.g., "Salvation" wrong).</li>
-                        <li>Heavy CCTV glitch.</li>
+                        <li>{{ t('wikiPage.characters.night.fatherGrayson.id1') }}</li>
+                        <li>{{ t('wikiPage.characters.night.fatherGrayson.id2') }}</li>
                       </ul>
                     </div>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value red">DENY (Multiple times)</span>
+                      <span class="action-label">{{ t('wikiPage.characters.night.fatherGrayson.protocol') }}</span>
+                      <span class="action-value red">{{ t('wikiPage.characters.night.fatherGrayson.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -297,13 +297,13 @@
                 <div class="entity-card anomaly">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Boozer (Night)</h3>
-                      <span class="status-badge red">ANOMALY</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.night.boozerNight.name') }}</h3>
+                      <span class="status-badge red">{{ t('wikiPage.characters.night.boozerNight.badge') }}</span>
                     </div>
-                    <p class="info-text">Returns at night, floating or convulsing—clearly possessed or transformed.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.night.boozerNight.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value red">DENY</span>
+                      <span class="action-label">{{ t('wikiPage.characters.night.boozerNight.protocol') }}</span>
+                      <span class="action-value red">{{ t('wikiPage.characters.night.boozerNight.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -312,13 +312,13 @@
                 <div class="entity-card safe">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Tiny Bob (Night)</h3>
-                      <span class="status-badge green">SAFE</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.night.tinyBobNight.name') }}</h3>
+                      <span class="status-badge green">{{ t('wikiPage.characters.night.tinyBobNight.badge') }}</span>
                     </div>
-                    <p class="info-text">Appears at night and offers $100 to enter and hide from pursuers.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.night.tinyBobNight.text') }}</p>
                     <div class="action-row">
-                      <span class="action-label">Protocol:</span>
-                      <span class="action-value green">LET IN</span>
+                      <span class="action-label">{{ t('wikiPage.characters.night.tinyBobNight.protocol') }}</span>
+                      <span class="action-value green">{{ t('wikiPage.characters.night.tinyBobNight.action') }}</span>
                     </div>
                   </div>
                 </div>
@@ -327,36 +327,36 @@
 
             <!-- Entities / Anomalies -->
             <div id="entities-anomalies" class="wiki-subsection">
-              <h3 class="subsection-title">Entities / Anomalies</h3>
+              <h3 class="subsection-title">{{ t('wikiPage.characters.entities.title') }}</h3>
               <div class="entity-list">
                 <!-- The Grabber Arm -->
                 <div class="entity-card anomaly">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">The Grabber Arm</h3>
-                      <span class="status-badge red">ANOMALY</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.entities.grabberArm.name') }}</h3>
+                      <span class="status-badge red">{{ t('wikiPage.characters.entities.grabberArm.badge') }}</span>
                     </div>
-                    <p class="info-text">A giant flesh-colored arm reaching from vents or behind shelves. Use the Axe when scripted.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.entities.grabberArm.text') }}</p>
                   </div>
                 </div>
                 <!-- The Meat Worm -->
                 <div class="entity-card anomaly">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">The Meat Worm</h3>
-                      <span class="status-badge red">ANOMALY</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.entities.meatWorm.name') }}</h3>
+                      <span class="status-badge red">{{ t('wikiPage.characters.entities.meatWorm.badge') }}</span>
                     </div>
-                    <p class="info-text">A massive intestine-like worm crawling on the floor.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.entities.meatWorm.text') }}</p>
                   </div>
                 </div>
                 <!-- Flesh Pile -->
                 <div class="entity-card anomaly">
                   <div class="entity-info full-width">
                     <div class="entity-header">
-                      <h3 class="entity-name">Flesh Pile</h3>
-                      <span class="status-badge red">ANOMALY</span>
+                      <h3 class="entity-name">{{ t('wikiPage.characters.entities.fleshPile.name') }}</h3>
+                      <span class="status-badge red">{{ t('wikiPage.characters.entities.fleshPile.badge') }}</span>
                     </div>
-                    <p class="info-text">A puddle of blood and flesh requiring cleanup.</p>
+                    <p class="info-text">{{ t('wikiPage.characters.entities.fleshPile.text') }}</p>
                   </div>
                 </div>
               </div>
@@ -365,61 +365,61 @@
 
           <!-- Part 3: Game Modes & Events -->
           <section id="special-events" class="wiki-section">
-            <h2 class="section-title text-purple">Game Modes & Events</h2>
+            <h2 class="section-title text-purple">{{ t('wikiPage.gameModes.title') }}</h2>
             <div class="entity-list">
               <div class="entity-card special">
                 <div class="entity-info full-width">
                   <div class="entity-header">
-                    <h3 class="entity-name">Day Shift</h3>
-                    <span class="status-badge purple">SIMULATION</span>
+                    <h3 class="entity-name">{{ t('wikiPage.gameModes.dayShift.name') }}</h3>
+                    <span class="status-badge purple">{{ t('wikiPage.gameModes.dayShift.badge') }}</span>
                   </div>
-                  <p class="info-text">Standard shop management. Stock shelves, clean spills, and serve customers to earn money. <strong>Goal:</strong> Maximize profit to buy defense items for the night.</p>
+                  <p class="info-text">{{ t('wikiPage.gameModes.dayShift.text') }} <strong>{{ t('wikiPage.gameModes.dayShift.goal') }}</strong> {{ t('wikiPage.gameModes.dayShift.goalText') }}</p>
                 </div>
               </div>
               
               <div class="entity-card special">
                 <div class="entity-info full-width">
                   <div class="entity-header">
-                    <h3 class="entity-name">Night Shift</h3>
-                    <span class="status-badge red">SURVIVAL</span>
+                    <h3 class="entity-name">{{ t('wikiPage.gameModes.nightShift.name') }}</h3>
+                    <span class="status-badge red">{{ t('wikiPage.gameModes.nightShift.badge') }}</span>
                   </div>
-                  <p class="info-text">The core horror experience. Anomalies appear. Use your earnings to buy tools (flashlight, holy water, etc.). <strong>Goal:</strong> Survive until 6 AM.</p>
+                  <p class="info-text">{{ t('wikiPage.gameModes.nightShift.text') }} <strong>{{ t('wikiPage.gameModes.nightShift.goal') }}</strong> {{ t('wikiPage.gameModes.nightShift.goalText') }}</p>
                 </div>
               </div>
               <div class="entity-card special">
                 <div class="entity-info full-width">
                   <div class="entity-header">
-                    <h3 class="entity-name">Daily Quota</h3>
-                    <span class="status-badge purple">SYSTEM</span>
+                    <h3 class="entity-name">{{ t('wikiPage.gameModes.dailyQuota.name') }}</h3>
+                    <span class="status-badge purple">{{ t('wikiPage.gameModes.dailyQuota.badge') }}</span>
                   </div>
-                  <p class="info-text">Each day has a sales target (e.g., $15, $35, $100). Failing repeatedly steers you toward a bad ending.</p>
+                  <p class="info-text">{{ t('wikiPage.gameModes.dailyQuota.text') }}</p>
                 </div>
               </div>
               <div class="entity-card special">
                 <div class="entity-info full-width">
                   <div class="entity-header">
-                    <h3 class="entity-name">Technical Break</h3>
-                    <span class="status-badge purple">SCHEDULE</span>
+                    <h3 class="entity-name">{{ t('wikiPage.gameModes.technicalBreak.name') }}</h3>
+                    <span class="status-badge purple">{{ t('wikiPage.gameModes.technicalBreak.badge') }}</span>
                   </div>
-                  <p class="info-text">At dusk, flip the sign to “Closed” and secure the front door before the night phase begins.</p>
+                  <p class="info-text">{{ t('wikiPage.gameModes.technicalBreak.text') }}</p>
                 </div>
               </div>
               <div class="entity-card special">
                 <div class="entity-info full-width">
                   <div class="entity-header">
-                    <h3 class="entity-name">Generator Maintenance</h3>
-                    <span class="status-badge purple">MAINTENANCE</span>
+                    <h3 class="entity-name">{{ t('wikiPage.gameModes.generator.name') }}</h3>
+                    <span class="status-badge purple">{{ t('wikiPage.gameModes.generator.badge') }}</span>
                   </div>
-                  <p class="info-text">Outdoor generator needs fuel and a manual pull. If it dies, fix power immediately—never open the door during outages.</p>
+                  <p class="info-text">{{ t('wikiPage.gameModes.generator.text') }}</p>
                 </div>
               </div>
               <div class="entity-card special">
                 <div class="entity-info full-width">
                   <div class="entity-header">
-                    <h3 class="entity-name">Bus Ride</h3>
-                    <span class="status-badge purple">TRAVEL</span>
+                    <h3 class="entity-name">{{ t('wikiPage.gameModes.busRide.name') }}</h3>
+                    <span class="status-badge purple">{{ t('wikiPage.gameModes.busRide.badge') }}</span>
                   </div>
-                  <p class="info-text">Commute by bus in the morning and leave at night—unless endings or events alter your routine.</p>
+                  <p class="info-text">{{ t('wikiPage.gameModes.busRide.text') }}</p>
                 </div>
               </div>
             </div>
@@ -427,23 +427,23 @@
 
           <!-- FAQ -->
           <section id="faq" class="wiki-section">
-            <h2 class="section-title">FAQ</h2>
+            <h2 class="section-title">{{ t('wikiPage.faq.title') }}</h2>
             <div class="faq-grid">
               <div class="faq-card">
-                <h3 class="faq-question">Can I kill the customers?</h3>
-                <p class="faq-answer">No. Hitting regular customers with an axe only annoys them or makes them complain; it doesn’t solve problems.</p>
+                <h3 class="faq-question">{{ t('wikiPage.faq.q1.question') }}</h3>
+                <p class="faq-answer">{{ t('wikiPage.faq.q1.answer') }}</p>
               </div>
               <div class="faq-card">
-                <h3 class="faq-question">What happens if I don’t clean the puke?</h3>
-                <p class="faq-answer">Puke and grime lower store reputation. Picky customers (like Karen) may refuse to pay or tip less.</p>
+                <h3 class="faq-question">{{ t('wikiPage.faq.q2.question') }}</h3>
+                <p class="faq-answer">{{ t('wikiPage.faq.q2.answer') }}</p>
               </div>
               <div class="faq-card">
-                <h3 class="faq-question">Where do I get planks?</h3>
-                <p class="faq-answer">Order via the in-store computer (SUPPLY.exe). Deliveries arrive at the bus stop outside.</p>
+                <h3 class="faq-question">{{ t('wikiPage.faq.q3.question') }}</h3>
+                <p class="faq-answer">{{ t('wikiPage.faq.q3.answer') }}</p>
               </div>
               <div class="faq-card">
-                <h3 class="faq-question">Can I fight back?</h3>
-                <p class="faq-answer">Not directly. You must use defense items bought with your Day Shift earnings or simply deny entry to anomalies.</p>
+                <h3 class="faq-question">{{ t('wikiPage.faq.q4.question') }}</h3>
+                <p class="faq-answer">{{ t('wikiPage.faq.q4.answer') }}</p>
               </div>
             </div>
           </section>
@@ -455,6 +455,9 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const activeSection = ref('');
 const activeTopSection = computed(() => {

@@ -1,7 +1,12 @@
-import { watch } from 'vue'
+import { watch, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { seoConfig } from './config.js'
-import blogData from '../data/blog.js'
+import { loadBlogData } from '../data/blog.js'
+import { useLocalizedPath } from '../composables/useLocalizedPath'
+
+// 支持的语言列表
+const supportedLocales = ['en', 'de', 'fr']
 
 const updateMetaTag = (name, content, attribute = 'name') => {
   if (!content || typeof document === 'undefined') return
@@ -27,7 +32,33 @@ const updateCanonicalLink = (href) => {
   canonical.setAttribute('href', href)
 }
 
-const setSEO = (seo) => {
+const updateHreflangLinks = (currentPath, getLocalizedPath) => {
+  if (typeof document === 'undefined') return
+  
+  // 移除现有的 hreflang 链接
+  const existingHreflangs = document.querySelectorAll('link[hreflang]')
+  existingHreflangs.forEach(link => link.remove())
+  
+  // 添加所有语言的 hreflang 链接
+  supportedLocales.forEach(locale => {
+    const localizedPath = getLocalizedPath(currentPath, locale)
+    const hreflang = document.createElement('link')
+    hreflang.setAttribute('rel', 'alternate')
+    hreflang.setAttribute('hreflang', locale)
+    hreflang.setAttribute('href', `${seoConfig.fullDomain}${localizedPath}`)
+    document.head.appendChild(hreflang)
+  })
+  
+  // 添加 x-default（指向英文版本）
+  const defaultPath = getLocalizedPath(currentPath, 'en')
+  const xDefault = document.createElement('link')
+  xDefault.setAttribute('rel', 'alternate')
+  xDefault.setAttribute('hreflang', 'x-default')
+  xDefault.setAttribute('href', `${seoConfig.fullDomain}${defaultPath}`)
+  document.head.appendChild(xDefault)
+}
+
+const setSEO = (seo, locale = 'en') => {
   const finalSEO = { ...seoConfig.defaults, ...seo }
   if (typeof document !== 'undefined') {
     document.title = finalSEO.title
@@ -41,6 +72,19 @@ const setSEO = (seo) => {
   updateMetaTag('og:url', finalSEO.canonical, 'property')
   updateMetaTag('og:type', finalSEO.type, 'property')
   updateMetaTag('og:site_name', 'Hellmart Game', 'property')
+  // Open Graph locale (格式: en_US, de_DE, fr_FR)
+  const ogLocale = locale === 'en' ? 'en_US' : locale === 'de' ? 'de_DE' : 'fr_FR'
+  updateMetaTag('og:locale', ogLocale, 'property')
+  // 清理旧的 alternate locale 标签
+  if (typeof document !== 'undefined') {
+    const existingAlternates = document.querySelectorAll('meta[property="og:locale:alternate"]')
+    existingAlternates.forEach(tag => tag.remove())
+  }
+  // 添加其他语言的 alternate locale
+  supportedLocales.filter(l => l !== locale).forEach(altLocale => {
+    const altOgLocale = altLocale === 'en' ? 'en_US' : altLocale === 'de' ? 'de_DE' : 'fr_FR'
+    updateMetaTag('og:locale:alternate', altOgLocale, 'property')
+  })
   updateMetaTag('twitter:card', 'summary_large_image', 'name')
   updateMetaTag('twitter:title', finalSEO.title, 'name')
   updateMetaTag('twitter:description', finalSEO.description, 'name')
@@ -90,30 +134,50 @@ const addStructuredData = (data) => {
 
 export function useAutoSEO() {
   const route = useRoute()
+  const { t, te, locale } = useI18n()
+  const { getLocalizedPath } = useLocalizedPath()
+  const blogData = ref([])
 
-  const resolveTDKFromMeta = (meta) => {
-    if (!meta || !meta.tdk) return null
+  // 加载 blog 数据
+  const loadBlog = async (lang) => {
+    blogData.value = await loadBlogData(lang)
+  }
+
+  // 初始化加载
+  loadBlog(locale.value)
+
+  // 监听语言变化
+  watch(locale, (newLocale) => {
+    loadBlog(newLocale)
+  })
+
+  const resolveTDKFromI18n = (tdkKey) => {
+    if (!tdkKey) return null
+    const base = `tdk.${tdkKey}`
+    const titleKey = `${base}.title`
+    const descKey = `${base}.description`
+    const kwKey = `${base}.keywords`
+    if (!te(titleKey)) return null
     return {
-      title: meta.tdk.title,
-      description: meta.tdk.description,
-      keywords: meta.tdk.keywords
+      title: t(titleKey),
+      description: te(descKey) ? t(descKey) : undefined,
+      keywords: te(kwKey) ? t(kwKey) : undefined
     }
   }
 
-  const applySEOForRoute = () => {
+  const applySEOForRoute = async () => {
     const path = route.path
     const canonical = `${seoConfig.fullDomain}${path}`
     let seo = { canonical }
-    const tdk = resolveTDKFromMeta(route.meta)
-    if (tdk) {
-      seo = { ...seo, ...tdk }
-      setSEO(seo)
-      addStructuredData(generateStructuredData(seo, 'WebPage'))
-      return
-    }
-    if (route.name === 'blog-detail') {
+
+    // Blog detail: SEO comes from data (post.seo). Keep it out of locales by design.
+    if (route.name && route.name.startsWith('blog-detail')) {
+      // 确保 blog 数据已加载
+      if (blogData.value.length === 0) {
+        await loadBlog(locale.value)
+      }
       const slug = route.params.slug
-      const post = blogData.find((p) => p.addressBar === slug)
+      const post = blogData.value.find((p) => p.addressBar === slug)
       if (post) {
         const title = (post.seo && post.seo.title) || post.title
         const description = (post.seo && post.seo.description) || post.description
@@ -127,20 +191,36 @@ export function useAutoSEO() {
           image,
           type: 'article'
         }
-        setSEO(seo)
+        setSEO(seo, locale.value)
         const extras = {
           '@type': 'Article',
           datePublished: post.publishDate,
           image: image
         }
         addStructuredData(generateStructuredData(seo, 'Article', extras))
+        // 添加 hreflang 链接
+        updateHreflangLinks(path, getLocalizedPath)
         return
       }
     }
+
+    // Static pages: SEO comes from i18n locales (tdk.*)
+    const tdk = resolveTDKFromI18n(route.meta && route.meta.tdkKey)
+    if (tdk) {
+      seo = { ...seo, ...tdk }
+      setSEO(seo, locale.value)
+      addStructuredData(generateStructuredData(seo, 'WebPage'))
+      // 添加 hreflang 链接
+      updateHreflangLinks(path, getLocalizedPath)
+      return
+    }
+
     seo = { ...seo, ...seoConfig.defaults }
-    setSEO(seo)
+    setSEO(seo, locale.value)
     addStructuredData(generateStructuredData(seo, 'WebPage'))
+    // 添加 hreflang 链接
+    updateHreflangLinks(path, getLocalizedPath)
   }
 
-  watch([() => route.fullPath, () => route.name], () => applySEOForRoute(), { immediate: true })
+  watch([() => route.fullPath, () => route.name, () => locale.value], () => applySEOForRoute(), { immediate: true })
 }

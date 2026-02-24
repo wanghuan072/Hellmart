@@ -2,8 +2,8 @@
   <main class="mechanics-page">
     <div class="hero-page">
       <div class="container">
-        <h1>Hellmart Game Mechanics & Controls Guide</h1>
-        <p>Master the register, manage your Sanity, and learn how to use the CCTV to fix anomalies. A complete guide to every tool and system.</p>
+        <h1>{{ t('mechanicsPage.hero.title') }}</h1>
+        <p>{{ t('mechanicsPage.hero.subtitle') }}</p>
       </div>
     </div>
 
@@ -12,12 +12,12 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
           <nav class="toc">
-            <h3 class="toc-title">Contents</h3>
+            <h3 class="toc-title">{{ t('mechanicsPage.toc.title') }}</h3>
             <ul class="toc-list">
-              <li><a href="#cashier" :class="['toc-link', { active: activeSection === 'cashier' }]" @click.prevent="scrollToSection('cashier')">Part 1: Cashier Systems</a></li>
-              <li><a href="#maintenance" :class="['toc-link', { active: activeSection === 'maintenance' }]" @click.prevent="scrollToSection('maintenance')">Part 2: Store Maintenance</a></li>
-              <li><a href="#survival" :class="['toc-link', { active: activeSection === 'survival' }]" @click.prevent="scrollToSection('survival')">Part 3: Survival Tools</a></li>
-              <li><a href="#stats" :class="['toc-link', { active: activeSection === 'stats' }]" @click.prevent="scrollToSection('stats')">Part 4: Player Stats</a></li>
+              <li><a href="#cashier" :class="['toc-link', { active: activeSection === 'cashier' }]" @click.prevent="scrollToSection('cashier')">{{ t('mechanicsPage.toc.part1') }}</a></li>
+              <li><a href="#maintenance" :class="['toc-link', { active: activeSection === 'maintenance' }]" @click.prevent="scrollToSection('maintenance')">{{ t('mechanicsPage.toc.part2') }}</a></li>
+              <li><a href="#survival" :class="['toc-link', { active: activeSection === 'survival' }]" @click.prevent="scrollToSection('survival')">{{ t('mechanicsPage.toc.part3') }}</a></li>
+              <li><a href="#stats" :class="['toc-link', { active: activeSection === 'stats' }]" @click.prevent="scrollToSection('stats')">{{ t('mechanicsPage.toc.part4') }}</a></li>
             </ul>
           </nav>
         </aside>
@@ -28,34 +28,34 @@
           <!-- Part 1: Cashier Systems -->
           <section id="cashier" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Part 1: The Cashier Systems</h2>
-              <span class="tag primary">Core Gameplay</span>
+              <h2 class="section-title">{{ t('mechanicsPage.part1.title') }}</h2>
+              <span class="tag primary">{{ t('mechanicsPage.part1.tag') }}</span>
             </div>
-            <p>This is the foundation of the game. Learn how to earn money quickly to meet your KPI.</p>
+            <p>{{ t('mechanicsPage.part1.intro') }}</p>
             
             <div class="content-body">
-              <h3 class="subsection-title">1. Scanning & Bagging</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part1.scanning.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>The Basics:</strong> Pick up item &rarr; Aim at barcode &rarr; Scan &rarr; Put in bag.</li>
-                <li><strong>Pro Tip (Combo):</strong> Do NOT scan one by one. Pick up all items on the counter first and pile them in your hand. Then, quickly scan and bag them all at once. This triggers a <strong>"Speed Bonus"</strong>.</li>
-                <li><strong>The Scanner:</strong> The default scanner is slow. Buy the <strong>High-Capacity Scanner ($200)</strong> ASAP to double your scanning speed.</li>
+                <li><strong>{{ t('mechanicsPage.part1.scanning.item1') }}</strong> {{ t('mechanicsPage.part1.scanning.item1Text') }}</li>
+                <li><strong>{{ t('mechanicsPage.part1.scanning.item2') }}</strong> {{ t('mechanicsPage.part1.scanning.item2Text') }} <strong>{{ t('mechanicsPage.part1.scanning.item2Bold') }}</strong>{{ t('mechanicsPage.part1.scanning.item2TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part1.scanning.item3') }}</strong> {{ t('mechanicsPage.part1.scanning.item3Text') }} <strong>{{ t('mechanicsPage.part1.scanning.item3Bold') }}</strong>{{ t('mechanicsPage.part1.scanning.item3TextEnd') }}</li>
               </ul>
 
-              <h3 class="subsection-title">2. The Silent Alarm</h3>
-              <p>Located under the counter (a small red button). This is a critical tool for store security.</p>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part1.alarm.title') }}</h3>
+              <p>{{ t('mechanicsPage.part1.alarm.text') }}</p>
               <ul class="simple-list">
-                <li><strong>Usage:</strong> Specifically designed for <strong>The Shoplifter</strong>.</li>
-                <li><strong>Action:</strong> Press the alarm the exact moment the Shoplifter puts an item into their pocket.</li>
+                <li><strong>{{ t('mechanicsPage.part1.alarm.item1') }}</strong> {{ t('mechanicsPage.part1.alarm.item1Text') }} <strong>{{ t('mechanicsPage.part1.alarm.item1Bold') }}</strong>{{ t('mechanicsPage.part1.alarm.item1TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part1.alarm.item2') }}</strong> {{ t('mechanicsPage.part1.alarm.item2Text') }}</li>
               </ul>
               <div class="alert-box danger">
-                <strong>Warning:</strong> If you press it by mistake (on a normal customer), you will lose a massive amount of <strong>Reputation</strong>.
+                <strong>{{ t('mechanicsPage.part1.alarm.warning') }}</strong> {{ t('mechanicsPage.part1.alarm.warningText') }} <strong>{{ t('mechanicsPage.part1.alarm.warningBold') }}</strong>{{ t('mechanicsPage.part1.alarm.warningTextEnd') }}
               </div>
 
-              <h3 class="subsection-title">3. Dealing with Scammers</h3>
-              <p>Scammers start appearing from <strong>Day 4</strong> onwards.</p>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part1.scammers.title') }}</h3>
+              <p>{{ t('mechanicsPage.part1.scammers.text') }} <strong>{{ t('mechanicsPage.part1.scammers.textBold') }}</strong>{{ t('mechanicsPage.part1.scammers.textEnd') }}</p>
               <ul class="simple-list">
-                <li><strong>Fake Money:</strong> Examine the bills closely. Fake notes have blurry watermarks or the denomination reads "$0".</li>
-                <li><strong>Wrong Change:</strong> Some customers will claim you gave them the wrong change. Do not believe them blindly. Check the register log. If the math is correct, click <strong>"Reject Complaint"</strong>.</li>
+                <li><strong>{{ t('mechanicsPage.part1.scammers.item1') }}</strong> {{ t('mechanicsPage.part1.scammers.item1Text') }}</li>
+                <li><strong>{{ t('mechanicsPage.part1.scammers.item2') }}</strong> {{ t('mechanicsPage.part1.scammers.item2Text') }} <strong>{{ t('mechanicsPage.part1.scammers.item2Bold') }}</strong>{{ t('mechanicsPage.part1.scammers.item2TextEnd') }}</li>
               </ul>
             </div>
           </section>
@@ -63,24 +63,24 @@
           <!-- Part 2: Store Maintenance -->
           <section id="maintenance" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Part 2: Store Maintenance</h2>
-              <span class="tag warning">Management</span>
+              <h2 class="section-title">{{ t('mechanicsPage.part2.title') }}</h2>
+              <span class="tag warning">{{ t('mechanicsPage.part2.tag') }}</span>
             </div>
-            <p>If you neglect the store, customers will leave angry or equipment will break down.</p>
+            <p>{{ t('mechanicsPage.part2.intro') }}</p>
 
             <div class="content-body">
-              <h3 class="subsection-title">1. Cleaning</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part2.cleaning.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Footprints:</strong> Customers track in snow and mud. Use the <strong>Mop</strong> to clean it up.</li>
-                <li><strong>Trash:</strong> Pick up trash on the floor and throw it in the bin outside.</li>
-                <li><strong>Consequence:</strong> Dirty Store = Low Tips = Missed KPI.</li>
+                <li><strong>{{ t('mechanicsPage.part2.cleaning.item1') }}</strong> {{ t('mechanicsPage.part2.cleaning.item1Text') }} <strong>{{ t('mechanicsPage.part2.cleaning.item1Bold') }}</strong>{{ t('mechanicsPage.part2.cleaning.item1TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part2.cleaning.item2') }}</strong> {{ t('mechanicsPage.part2.cleaning.item2Text') }}</li>
+                <li><strong>{{ t('mechanicsPage.part2.cleaning.item3') }}</strong> {{ t('mechanicsPage.part2.cleaning.item3Text') }}</li>
               </ul>
 
-              <h3 class="subsection-title">2. Power Management</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part2.power.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>The Fuse Box:</strong> Located on the wall in the <strong>Storage Room</strong> (Backroom).</li>
-                <li><strong>Overload:</strong> If you have too many lights/devices on, or if the blizzard is too strong, the circuit breaker will trip.</li>
-                <li><strong>Repair:</strong> You must go to the Storage Room and flip the lever back up. <strong>Remember to bring a flashlight!</strong></li>
+                <li><strong>{{ t('mechanicsPage.part2.power.item1') }}</strong> {{ t('mechanicsPage.part2.power.item1Text') }} <strong>{{ t('mechanicsPage.part2.power.item1Bold') }}</strong>{{ t('mechanicsPage.part2.power.item1TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part2.power.item2') }}</strong> {{ t('mechanicsPage.part2.power.item2Text') }}</li>
+                <li><strong>{{ t('mechanicsPage.part2.power.item3') }}</strong> {{ t('mechanicsPage.part2.power.item3Text') }} <strong>{{ t('mechanicsPage.part2.power.item3Bold') }}</strong></li>
               </ul>
             </div>
           </section>
@@ -88,35 +88,35 @@
           <!-- Part 3: Survival Tools -->
           <section id="survival" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Part 3: Survival Tools</h2>
-              <span class="tag danger">Defense</span>
+              <h2 class="section-title">{{ t('mechanicsPage.part3.title') }}</h2>
+              <span class="tag danger">{{ t('mechanicsPage.part3.tag') }}</span>
             </div>
-            <p>Understanding your defensive tools is the only way to survive the night.</p>
+            <p>{{ t('mechanicsPage.part3.intro') }}</p>
 
             <div class="content-body">
-              <h3 class="subsection-title">1. UV Light</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part3.uvLight.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Usage:</strong> Identify <strong>Mimics</strong>.</li>
-                <li><strong>How to use:</strong> Shine the light on a customer's hands, neck, or face.</li>
-                <li><strong>Signs:</strong> If you see <strong>Glowing Seams</strong> on the skin or incorrect fingerprints, it is a monster.</li>
+                <li><strong>{{ t('mechanicsPage.part3.uvLight.item1') }}</strong> {{ t('mechanicsPage.part3.uvLight.item1Text') }} <strong>{{ t('mechanicsPage.part3.uvLight.item1Bold') }}</strong>{{ t('mechanicsPage.part3.uvLight.item1TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part3.uvLight.item2') }}</strong> {{ t('mechanicsPage.part3.uvLight.item2Text') }}</li>
+                <li><strong>{{ t('mechanicsPage.part3.uvLight.item3') }}</strong> {{ t('mechanicsPage.part3.uvLight.item3Text') }} <strong>{{ t('mechanicsPage.part3.uvLight.item3Bold') }}</strong>{{ t('mechanicsPage.part3.uvLight.item3TextEnd') }}</li>
               </ul>
 
-              <h3 class="subsection-title">2. CCTV Monitor</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part3.cctv.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Static (Interference):</strong> The most basic indicator. If the camera feed shakes or shows static noise when looking at someone, <strong>DO NOT OPEN THE DOOR</strong>.</li>
-                <li><strong>Blind Spots:</strong> Cameras have blind spots. Some monsters will hide directly under the camera. You must visually confirm their presence through the window.</li>
+                <li><strong>{{ t('mechanicsPage.part3.cctv.item1') }}</strong> {{ t('mechanicsPage.part3.cctv.item1Text') }} <strong>{{ t('mechanicsPage.part3.cctv.item1Bold') }}</strong>{{ t('mechanicsPage.part3.cctv.item1TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part3.cctv.item2') }}</strong> {{ t('mechanicsPage.part3.cctv.item2Text') }}</li>
               </ul>
 
-              <h3 class="subsection-title">3. The Blinds</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part3.blinds.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Usage:</strong> Defense against visual-based monsters (e.g., <strong>The Smiling Woman</strong>).</li>
-                <li><strong>Mechanic:</strong> Pulling the blinds cuts off their <strong>Line of Sight</strong>. Use this immediately when you hear a tapping sound on the window.</li>
+                <li><strong>{{ t('mechanicsPage.part3.blinds.item1') }}</strong> {{ t('mechanicsPage.part3.blinds.item1Text') }} <strong>{{ t('mechanicsPage.part3.blinds.item1Bold') }}</strong>{{ t('mechanicsPage.part3.blinds.item1TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part3.blinds.item2') }}</strong> {{ t('mechanicsPage.part3.blinds.item2Text') }} <strong>{{ t('mechanicsPage.part3.blinds.item2Bold') }}</strong>{{ t('mechanicsPage.part3.blinds.item2TextEnd') }}</li>
               </ul>
 
-              <h3 class="subsection-title">4. The Axe</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part3.axe.title') }}</h3>
               <div class="alert-box danger">
-                <strong>Usage:</strong> Only used for the <strong>Day 3 Hand Event</strong> or specific scripted kills.
-                <br><strong>Warning:</strong> Do NOT use it on normal customers. This results in an immediate <strong>Game Over</strong>.
+                <strong>{{ t('mechanicsPage.part3.axe.usage') }}</strong> {{ t('mechanicsPage.part3.axe.usageText') }} <strong>{{ t('mechanicsPage.part3.axe.usageBold') }}</strong>{{ t('mechanicsPage.part3.axe.usageTextEnd') }}
+                <br><strong>{{ t('mechanicsPage.part3.axe.warning') }}</strong> {{ t('mechanicsPage.part3.axe.warningText') }} <strong>{{ t('mechanicsPage.part3.axe.warningBold') }}</strong>{{ t('mechanicsPage.part3.axe.warningTextEnd') }}
               </div>
             </div>
           </section>
@@ -124,23 +124,23 @@
           <!-- Part 4: Player Stats -->
           <section id="stats" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Part 4: Player Stats</h2>
-              <span class="tag info">Status</span>
+              <h2 class="section-title">{{ t('mechanicsPage.part4.title') }}</h2>
+              <span class="tag info">{{ t('mechanicsPage.part4.tag') }}</span>
             </div>
-            <p>Many players die without knowing why. Keep an eye on your vitals.</p>
+            <p>{{ t('mechanicsPage.part4.intro') }}</p>
 
             <div class="content-body">
-              <h3 class="subsection-title">1. Sanity</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part4.sanity.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>What lowers it:</strong> Staying in the dark, staring at monsters, or witnessing paranormal events.</li>
-                <li><strong>Symptoms:</strong> Blurry vision, distorted audio, loud heartbeat, and seeing fake figures (Hallucinations).</li>
-                <li><strong>How to recover:</strong> Stand near <strong>Light Sources</strong> or take <strong>Sanity Pills</strong> (buy from Pharmacy).</li>
+                <li><strong>{{ t('mechanicsPage.part4.sanity.item1') }}</strong> {{ t('mechanicsPage.part4.sanity.item1Text') }}</li>
+                <li><strong>{{ t('mechanicsPage.part4.sanity.item2') }}</strong> {{ t('mechanicsPage.part4.sanity.item2Text') }}</li>
+                <li><strong>{{ t('mechanicsPage.part4.sanity.item3') }}</strong> {{ t('mechanicsPage.part4.sanity.item3Text') }} <strong>{{ t('mechanicsPage.part4.sanity.item3Bold') }}</strong>{{ t('mechanicsPage.part4.sanity.item3TextEnd') }} <strong>{{ t('mechanicsPage.part4.sanity.item3Bold2') }}</strong>{{ t('mechanicsPage.part4.sanity.item3TextEnd2') }}</li>
               </ul>
 
-              <h3 class="subsection-title">2. Stamina</h3>
+              <h3 class="subsection-title">{{ t('mechanicsPage.part4.stamina.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Mechanic:</strong> Your ability to <strong>Sprint</strong> is limited.</li>
-                <li><strong>Boost:</strong> Drinking <strong>Coffee</strong> or <strong>Soda</strong> temporarily increases your stamina recovery speed.</li>
+                <li><strong>{{ t('mechanicsPage.part4.stamina.item1') }}</strong> {{ t('mechanicsPage.part4.stamina.item1Text') }} <strong>{{ t('mechanicsPage.part4.stamina.item1Bold') }}</strong>{{ t('mechanicsPage.part4.stamina.item1TextEnd') }}</li>
+                <li><strong>{{ t('mechanicsPage.part4.stamina.item2') }}</strong> {{ t('mechanicsPage.part4.stamina.item2Text') }} <strong>{{ t('mechanicsPage.part4.stamina.item2Bold') }}</strong>{{ t('mechanicsPage.part4.stamina.item2TextEnd') }} <strong>{{ t('mechanicsPage.part4.stamina.item2Bold2') }}</strong>{{ t('mechanicsPage.part4.stamina.item2TextEnd2') }}</li>
               </ul>
             </div>
           </section>
@@ -153,7 +153,9 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const activeSection = ref('cashier')
 
 let observer = null

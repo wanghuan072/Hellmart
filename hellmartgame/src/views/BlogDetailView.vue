@@ -1,13 +1,69 @@
 <script setup>
-import { computed, onMounted, watchEffect } from 'vue'
+import { computed, onMounted, ref, watch, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import blogData from '../data/blog.js'
+import { useI18n } from 'vue-i18n'
+import { loadBlogData } from '../data/blog.js'
+import { useLocalizedPath } from '../composables/useLocalizedPath'
 
+const { t, locale } = useI18n()
 const route = useRoute()
 const router = useRouter()
+const { getLocalizedPath } = useLocalizedPath()
+const blogData = ref([])
+
+const loadData = async (lang) => {
+  blogData.value = await loadBlogData(lang)
+}
+
+// 初始化加载数据并查找 post
+const initPost = async () => {
+  await nextTick() // 等待路由守卫设置语言
+  await loadData(locale.value)
+  const slug = route.params.slug
+  const foundPost = blogData.value.find(p => p.addressBar === slug)
+  if (!foundPost) {
+    router.replace(getLocalizedPath('/blog'))
+  }
+}
+
+onMounted(async () => {
+  await initPost()
+})
+
+// 监听路由完整路径变化（包括语言前缀变化）
+watch(
+  () => route.fullPath,
+  async (newPath, oldPath) => {
+    if (newPath !== oldPath && oldPath) {
+      await nextTick() // 等待路由守卫设置语言
+      await initPost()
+    }
+  },
+  { immediate: false }
+)
+
+// 监听路由参数变化，更新当前 post
+watch(
+  () => route.params.slug,
+  async () => {
+    await nextTick() // 等待路由守卫设置语言
+    await loadData(locale.value)
+  }
+)
+
+// 监听语言变化，重新加载数据
+watch(
+  () => locale.value,
+  async (newLocale, oldLocale) => {
+    // 只有当语言真正变化时才重新加载
+    if (newLocale !== oldLocale && oldLocale !== undefined) {
+      await initPost()
+    }
+  }
+)
 
 const post = computed(() => {
-  return blogData.find(p => p.addressBar === route.params.slug)
+  return blogData.value.find(p => p.addressBar === route.params.slug)
 })
 
 const formatDate = (dateString) => {
@@ -16,36 +72,6 @@ const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString('en-US', options)
 }
 
-onMounted(() => {
-  if (!post.value) {
-    router.replace('/blog')
-  }
-})
-
-// Update SEO Meta Tags
-watchEffect(() => {
-  if (post.value && post.value.seo) {
-    document.title = `${post.value.seo.title} | Hellmart Game`
-    
-    // Update Meta Description
-    let metaDesc = document.querySelector('meta[name="description"]')
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta')
-      metaDesc.name = "description"
-      document.head.appendChild(metaDesc)
-    }
-    metaDesc.content = post.value.seo.description
-
-    // Update Meta Keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]')
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta')
-      metaKeywords.name = "keywords"
-      document.head.appendChild(metaKeywords)
-    }
-    metaKeywords.content = post.value.seo.keywords
-  }
-})
 </script>
 
 <template>
@@ -53,14 +79,14 @@ watchEffect(() => {
     <div class="hero-page">
       <div class="container">
         <nav class="breadcrumb">
-          <router-link to="/">Home</router-link> 
+          <router-link :to="getLocalizedPath('/')">{{ t('blogDetailPage.breadcrumb.home') }}</router-link> 
           <span class="separator">/</span>
-          <router-link to="/blog">Blog</router-link>
+          <router-link :to="getLocalizedPath('/blog')">{{ t('blogDetailPage.breadcrumb.blog') }}</router-link>
           <span class="separator">/</span>
           <span class="current">{{ post.title }}</span>
         </nav>
         <h1>{{ post.title }}</h1>
-        <p class="subtitle">Published on {{ formatDate(post.publishDate) }} • Official Communication</p>
+        <p class="subtitle">{{ t('blogDetailPage.published') }} {{ formatDate(post.publishDate) }} • {{ t('blogDetailPage.official') }}</p>
       </div>
     </div>
 
@@ -71,7 +97,7 @@ watchEffect(() => {
           <div class="post-body" v-html="post.detailsHtml"></div>
 
           <div class="post-footer">
-            <router-link to="/blog" class="back-link">&larr; Back to Blog</router-link>
+            <router-link :to="getLocalizedPath('/blog')" class="back-link">{{ t('blogDetailPage.backToBlog') }}</router-link>
           </div>
         </div>
 
@@ -82,11 +108,11 @@ watchEffect(() => {
               <img :src="post.imageUrl" :alt="post.imageAlt || post.title" />
             </div>
             <div class="sidebar-content">
-              <h3>About this Post</h3>
+              <h3>{{ t('blogDetailPage.about') }}</h3>
               <p class="description">{{ post.description }}</p>
               
               <div class="tags-section">
-                <h4>Tags</h4>
+                <h4>{{ t('blogDetailPage.tags') }}</h4>
                 <div class="tags">
                   <span v-for="tag in post.tags" :key="tag" class="tag">{{ tag }}</span>
                 </div>

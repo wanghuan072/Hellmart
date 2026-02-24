@@ -2,8 +2,8 @@
   <div class="legal-page">
     <div class="hero-page">
       <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>Official Legal Document • Effective Date: {{ currentDate }}</p>
+        <h1>{{ t('privacyPolicyPage.hero.title') }}</h1>
+        <p>{{ t('privacyPolicyPage.hero.subtitle') }} {{ currentDate }}</p>
       </div>
     </div>
 
@@ -11,44 +11,44 @@
       <div class="container">
         <div class="content-wrapper">
           <div class="legal-text">
-            <h2>Introduction</h2>
+            <h2>{{ t('privacyPolicyPage.sections.introduction.title') }}</h2>
             <p>
-              Hellmart Game ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
+              {{ t('privacyPolicyPage.sections.introduction.text') }}
             </p>
 
-            <h2>Information We Collect</h2>
+            <h2>{{ t('privacyPolicyPage.sections.information.title') }}</h2>
             <p>
-              We may collect information that you provide directly to us, such as when you contact us or interact with our website. This may include your name, email address, and any messages you send to us.
+              {{ t('privacyPolicyPage.sections.information.text') }}
             </p>
 
-            <h2>How We Use Your Information</h2>
+            <h2>{{ t('privacyPolicyPage.sections.use.title') }}</h2>
             <p>
-              We use the information we collect to provide, maintain, and improve our services, respond to your inquiries, and communicate with you about our website and services.
+              {{ t('privacyPolicyPage.sections.use.text') }}
             </p>
 
-            <h2>Data Security</h2>
+            <h2>{{ t('privacyPolicyPage.sections.security.title') }}</h2>
             <p>
-              We implement appropriate security measures to protect your personal information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
+              {{ t('privacyPolicyPage.sections.security.text') }}
             </p>
 
-            <h2>Third-Party Services</h2>
+            <h2>{{ t('privacyPolicyPage.sections.thirdParty.title') }}</h2>
             <p>
-              Our website may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.
+              {{ t('privacyPolicyPage.sections.thirdParty.text') }}
             </p>
 
-            <h2>Cookies</h2>
+            <h2>{{ t('privacyPolicyPage.sections.cookies.title') }}</h2>
             <p>
-              We may use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie settings through your browser preferences.
+              {{ t('privacyPolicyPage.sections.cookies.text') }}
             </p>
 
-            <h2>Contact Us</h2>
+            <h2>{{ t('privacyPolicyPage.sections.contact.title') }}</h2>
             <p>
-              If you have any questions about this Privacy Policy, please contact us at <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a>.
+              {{ t('privacyPolicyPage.sections.contact.text') }} <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a>.
             </p>
 
-            <h2>Changes to This Policy</h2>
+            <h2>{{ t('privacyPolicyPage.sections.changes.title') }}</h2>
             <p>
-              We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
+              {{ t('privacyPolicyPage.sections.changes.text') }}
             </p>
           </div>
         </div>
@@ -58,20 +58,10 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const currentDate = 'February 3, 2026'
-
-onMounted(() => {
-  document.title = 'Privacy Policy - Hellmart Game'
-  let metaDesc = document.querySelector('meta[name="description"]')
-  if (!metaDesc) {
-    metaDesc = document.createElement('meta')
-    metaDesc.name = "description"
-    document.head.appendChild(metaDesc)
-  }
-  metaDesc.content = 'Privacy Policy for Hellmart Game. Learn how we collect, use, and protect your personal information when you visit our website.'
-})
 </script>
 
 <style scoped>

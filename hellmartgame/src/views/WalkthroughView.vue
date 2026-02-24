@@ -2,8 +2,8 @@
   <main class="walkthrough-page">
     <div class="hero-page">
       <div class="container">
-        <h1>Hellmart Full Gameplay Walkthrough: Day 1 to Ending</h1>
-        <p>The complete day-by-day survival guide. Learn how to manage the economy, survive power outages, and reach the final shift.</p>
+        <h1>{{ t('walkthroughPage.hero.title') }}</h1>
+        <p>{{ t('walkthroughPage.hero.subtitle') }}</p>
       </div>
     </div>
 
@@ -12,17 +12,17 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
           <nav class="toc">
-            <h2 class="toc-title">Contents</h2>
+            <h2 class="toc-title">{{ t('walkthroughPage.toc.title') }}</h2>
             <ul class="toc-list">
-              <li><a href="#intro" :class="['toc-link', { active: activeSection === 'intro' }]" @click.prevent="scrollToSection('intro')">Introduction</a></li>
-              <li><a href="#day1" :class="['toc-link', { active: activeSection === 'day1' }]" @click.prevent="scrollToSection('day1')">Day 1: Orientation</a></li>
-              <li><a href="#day2" :class="['toc-link', { active: activeSection === 'day2' }]" @click.prevent="scrollToSection('day2')">Day 2: First Anomalies</a></li>
-              <li><a href="#day3" :class="['toc-link', { active: activeSection === 'day3' }]" @click.prevent="scrollToSection('day3')">Day 3: Generator & Axe</a></li>
-              <li><a href="#day4" :class="['toc-link', { active: activeSection === 'day4' }]" @click.prevent="scrollToSection('day4')">Day 4: Faith & Coin</a></li>
-              <li><a href="#day5" :class="['toc-link', { active: activeSection === 'day5' }]" @click.prevent="scrollToSection('day5')">Day 5: Smiling Woman</a></li>
-              <li><a href="#day6" :class="['toc-link', { active: activeSection === 'day6' }]" @click.prevent="scrollToSection('day6')">Day 6: Drunk & Imposter</a></li>
-              <li><a href="#day7" :class="['toc-link', { active: activeSection === 'day7' }]" @click.prevent="scrollToSection('day7')">Day 7: The Stranger</a></li>
-              <li><a href="#day8" :class="['toc-link', { active: activeSection === 'day8' }]" @click.prevent="scrollToSection('day8')">Day 8: The End</a></li>
+              <li><a href="#intro" :class="['toc-link', { active: activeSection === 'intro' }]" @click.prevent="scrollToSection('intro')">{{ t('walkthroughPage.toc.intro') }}</a></li>
+              <li><a href="#day1" :class="['toc-link', { active: activeSection === 'day1' }]" @click.prevent="scrollToSection('day1')">{{ t('walkthroughPage.toc.day1') }}</a></li>
+              <li><a href="#day2" :class="['toc-link', { active: activeSection === 'day2' }]" @click.prevent="scrollToSection('day2')">{{ t('walkthroughPage.toc.day2') }}</a></li>
+              <li><a href="#day3" :class="['toc-link', { active: activeSection === 'day3' }]" @click.prevent="scrollToSection('day3')">{{ t('walkthroughPage.toc.day3') }}</a></li>
+              <li><a href="#day4" :class="['toc-link', { active: activeSection === 'day4' }]" @click.prevent="scrollToSection('day4')">{{ t('walkthroughPage.toc.day4') }}</a></li>
+              <li><a href="#day5" :class="['toc-link', { active: activeSection === 'day5' }]" @click.prevent="scrollToSection('day5')">{{ t('walkthroughPage.toc.day5') }}</a></li>
+              <li><a href="#day6" :class="['toc-link', { active: activeSection === 'day6' }]" @click.prevent="scrollToSection('day6')">{{ t('walkthroughPage.toc.day6') }}</a></li>
+              <li><a href="#day7" :class="['toc-link', { active: activeSection === 'day7' }]" @click.prevent="scrollToSection('day7')">{{ t('walkthroughPage.toc.day7') }}</a></li>
+              <li><a href="#day8" :class="['toc-link', { active: activeSection === 'day8' }]" @click.prevent="scrollToSection('day8')">{{ t('walkthroughPage.toc.day8') }}</a></li>
             </ul>
           </nav>
         </aside>
@@ -32,30 +32,30 @@
           
           <!-- Intro -->
           <section id="intro" class="section-block">
-            <h2 class="section-title">Introduction: The Gameplay Loop</h2>
-            <p>In Hellmart, your goal is simple: Earn enough money to meet the daily Quota (KPI) while surviving the night. The day is split into two phases:</p>
+            <h2 class="section-title">{{ t('walkthroughPage.intro.title') }}</h2>
+            <p>{{ t('walkthroughPage.intro.text') }}</p>
             
             <div class="gameplay-loop">
               <div class="loop-phase safe">
                 <div class="phase-header">
-                  <span class="phase-label">PHASE 01</span>
-                  <h3 class="subsection-title">Stocking & Cleaning</h3>
+                  <span class="phase-label">{{ t('walkthroughPage.intro.phase1.label') }}</span>
+                  <h3 class="subsection-title">{{ t('walkthroughPage.intro.phase1.title') }}</h3>
                 </div>
-                <p>The Safe phase. Keep the store tidy, shelf items, and clear snow to keep customers happy.</p>
+                <p>{{ t('walkthroughPage.intro.phase1.text') }}</p>
               </div>
               <div class="loop-phase danger">
                 <div class="phase-header">
-                  <span class="phase-label">PHASE 02</span>
-                  <h3 class="subsection-title">The Night Shift</h3>
+                  <span class="phase-label">{{ t('walkthroughPage.intro.phase2.label') }}</span>
+                  <h3 class="subsection-title">{{ t('walkthroughPage.intro.phase2.title') }}</h3>
                 </div>
-                <p>The Defense phase. Use CCTV and intuition to filter out Anomalies.</p>
+                <p>{{ t('walkthroughPage.intro.phase2.text') }}</p>
               </div>
               <div class="loop-phase core">
                 <div class="phase-header">
-                  <span class="phase-label">CORE</span>
-                  <h3 class="subsection-title">Energy Management</h3>
+                  <span class="phase-label">{{ t('walkthroughPage.intro.phase3.label') }}</span>
+                  <h3 class="subsection-title">{{ t('walkthroughPage.intro.phase3.title') }}</h3>
                 </div>
-                <p>Watch your Stamina. Buy Coffee to move faster.</p>
+                <p>{{ t('walkthroughPage.intro.phase3.text') }}</p>
               </div>
             </div>
           </section>
@@ -63,45 +63,45 @@
           <!-- Day 1 -->
           <section id="day1" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 1: Orientation & Basics</h2>
-              <span class="tag low">Focus: Learning the controls. No lethal threats.</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day1.title') }}</h2>
+              <span class="tag low">{{ t('walkthroughPage.day1.tag') }}</span>
             </div>
             
             <div class="content-body">
-              <h3 class="subsection-title">Morning</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day1.morning.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Pick up the Shovel</strong> outside and clear the snow pile. You cannot enter until this is done.</li>
+                <li><strong>{{ t('walkthroughPage.day1.morning.item1') }}</strong> {{ t('walkthroughPage.day1.morning.item1Text') }}</li>
               </ul>
 
-              <h3 class="subsection-title">The Call</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day1.call.title') }}</h3>
               <ul class="simple-list">
-                <li>Answer the phone at the booth. The Boss introduces the job.</li>
+                <li>{{ t('walkthroughPage.day1.call.item1') }}</li>
               </ul>
               
-              <h3 class="subsection-title">Setup</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day1.setup.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Go to Storage</strong> (back building), pick up boxes (Chips/Peanuts), and stock the shelves.</li>
-                <li>Find the <strong>Pager</strong> on the counter.</li>
-                <li><strong>Clean</strong> any dirt spots with the Mop or Sponge.</li>
+                <li><strong>{{ t('walkthroughPage.day1.setup.item1') }}</strong> {{ t('walkthroughPage.day1.setup.item1Text') }}</li>
+                <li>{{ t('walkthroughPage.day1.setup.item2') }} <strong>{{ t('walkthroughPage.day1.setup.item2Bold') }}</strong> {{ t('walkthroughPage.day1.setup.item2Text') }}</li>
+                <li><strong>{{ t('walkthroughPage.day1.setup.item3') }}</strong> {{ t('walkthroughPage.day1.setup.item3Text') }}</li>
               </ul>
 
-              <h3 class="subsection-title">Open Store</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day1.openStore.title') }}</h3>
               <ul class="simple-list">
-                <li>Flip the sign to "OPEN".</li>
+                <li>{{ t('walkthroughPage.day1.openStore.item1') }}</li>
               </ul>
 
-              <h3 class="subsection-title">Day Shift</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day1.dayShift.title') }}</h3>
               <ul class="simple-list">
-                <li>Serve customers. Scan items, take cash, give change.</li>
+                <li>{{ t('walkthroughPage.day1.dayShift.item1') }}</li>
               </ul>
 
-              <h3 class="subsection-title">Closing</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day1.closing.title') }}</h3>
               <ul class="simple-list">
-                <li>When the pager beeps, flip the sign to "TECHNICAL BREAK".</li>
+                <li>{{ t('walkthroughPage.day1.closing.item1') }}</li>
               </ul>
 
               <div class="alert-box success">
-                <strong>Night:</strong> No visitors tonight. Go to the staff room and sleep.
+                <strong>{{ t('walkthroughPage.day1.night.label') }}</strong> {{ t('walkthroughPage.day1.night.text') }}
               </div>
             </div>
 
@@ -111,25 +111,25 @@
           <!-- Day 2 -->
           <section id="day2" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 2: First Anomalies</h2>
-              <span class="tag medium">Focus: Identifying your first Night Visitor.</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day2.title') }}</h2>
+              <span class="tag medium">{{ t('walkthroughPage.day2.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">New Product</h3>
-              <p>Soda is now available in Storage. Stock it.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day2.newProduct.title') }}</h3>
+              <p>{{ t('walkthroughPage.day2.newProduct.text') }}</p>
 
-              <h3 class="subsection-title">The Tall Man (Tiny Bob)</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day2.tinyBob.title') }}</h3>
               <ul class="simple-list">
-                <li>A giant man in a green jacket will enter. <strong>Do not panic.</strong> He is a safe, paying customer.</li>
+                <li>{{ t('walkthroughPage.day2.tinyBob.item1') }} <strong>{{ t('walkthroughPage.day2.tinyBob.item1Bold') }}</strong> {{ t('walkthroughPage.day2.tinyBob.item1Text') }}</li>
               </ul>
 
-              <h3 class="subsection-title">Night Shift Event</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day2.nightEvent.title') }}</h3>
               <div class="alert-box info">
-                <strong>Visitor:</strong> Colin (Bald man in black coat).<br>
-                <strong>Story:</strong> Claims he missed the bus and hears noises.<br>
-                <strong>Decision:</strong> <span class="tag low">LET IN</span><br>
-                <strong>Result:</strong> He pays you $5 and shops peacefully.
+                <strong>{{ t('walkthroughPage.day2.nightEvent.visitor') }}</strong> {{ t('walkthroughPage.day2.nightEvent.visitorText') }}<br>
+                <strong>{{ t('walkthroughPage.day2.nightEvent.story') }}</strong> {{ t('walkthroughPage.day2.nightEvent.storyText') }}<br>
+                <strong>{{ t('walkthroughPage.day2.nightEvent.decision') }}</strong> <span class="tag low">{{ t('walkthroughPage.day2.nightEvent.decisionText') }}</span><br>
+                <strong>{{ t('walkthroughPage.day2.nightEvent.result') }}</strong> {{ t('walkthroughPage.day2.nightEvent.resultText') }}
               </div>
             </div>
 
@@ -139,31 +139,31 @@
           <!-- Day 3 -->
           <section id="day3" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 3: The Generator & The Axe</h2>
-              <span class="tag high">Focus: Survival & Weaponry</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day3.title') }}</h2>
+              <span class="tag high">{{ t('walkthroughPage.day3.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">New Product</h3>
-              <p>Beer & Whiskey.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day3.newProduct.title') }}</h3>
+              <p>{{ t('walkthroughPage.day3.newProduct.text') }}</p>
 
-              <h3 class="subsection-title">Event: Power Outage</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day3.powerOutage.title') }}</h3>
               <div class="alert-box danger">
-                <strong>The lights will cut out.</strong>
+                <strong>{{ t('walkthroughPage.day3.powerOutage.text') }}</strong>
               </div>
-              <h3 class="subsection-title">Solution</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day3.solution.title') }}</h3>
               <ul class="ordered-list">
-                <li>Go to the Storage shed outside.</li>
-                <li>Find the <strong>Fuel Canister</strong>.</li>
-                <li>Fill the <strong>Generator</strong> (side of the building) and pull the cord.</li>
+                <li>{{ t('walkthroughPage.day3.solution.item1') }}</li>
+                <li>{{ t('walkthroughPage.day3.solution.item2') }} <strong>{{ t('walkthroughPage.day3.solution.item2Bold') }}</strong>{{ t('walkthroughPage.day3.solution.item2Text') }}</li>
+                <li>{{ t('walkthroughPage.day3.solution.item3') }} <strong>{{ t('walkthroughPage.day3.solution.item3Bold') }}</strong>{{ t('walkthroughPage.day3.solution.item3Text') }}</li>
               </ul>
-              <h3 class="subsection-title">Weapon Acquired</h3>
-              <p>You will find a <strong>Fire Axe</strong> in the emergency glass case. Take it.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day3.weapon.title') }}</h3>
+              <p>{{ t('walkthroughPage.day3.weapon.text') }} <strong>{{ t('walkthroughPage.day3.weapon.textBold') }}</strong>{{ t('walkthroughPage.day3.weapon.textEnd') }}</p>
 
-              <h3 class="subsection-title">Night Threat</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day3.nightThreat.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>The Meat Worm:</strong> A giant tentacle might appear on the floor. Use the Axe.</li>
-                <li><strong>The Grabber Arm:</strong> A hand reaching from shelves/ceiling. Use the Axe.</li>
+                <li><strong>{{ t('walkthroughPage.day3.nightThreat.item1') }}</strong> {{ t('walkthroughPage.day3.nightThreat.item1Text') }}</li>
+                <li><strong>{{ t('walkthroughPage.day3.nightThreat.item2') }}</strong> {{ t('walkthroughPage.day3.nightThreat.item2Text') }}</li>
               </ul>
             </div>
 
@@ -173,26 +173,26 @@
           <!-- Day 4 -->
           <section id="day4" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 4: Faith & The Coin</h2>
-              <span class="tag high">Focus: Moral choices</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day4.title') }}</h2>
+              <span class="tag high">{{ t('walkthroughPage.day4.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">New Product</h3>
-              <p>Cereal & Hotdogs.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day4.newProduct.title') }}</h3>
+              <p>{{ t('walkthroughPage.day4.newProduct.text') }}</p>
 
-              <h3 class="subsection-title">Special Customer: The Coin Toss Man</h3>
-              <p>He asks "Heads or Tails?".</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day4.coinToss.title') }}</h3>
+              <p>{{ t('walkthroughPage.day4.coinToss.text') }}</p>
               <div class="alert-box success">
-                <strong>Tip:</strong> If you win, he gives you a Lucky Quarter. Keep it!
+                <strong>{{ t('walkthroughPage.day4.coinToss.tip') }}</strong> {{ t('walkthroughPage.day4.coinToss.tipText') }}
               </div>
 
-              <h3 class="subsection-title">Night Shift Event</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day4.nightEvent.title') }}</h3>
               <div class="alert-box danger">
-                <strong>Visitor:</strong> Father Grayson (Priest with glowing eyes).<br>
-                <strong>Story:</strong> Claims he feels a "darkness" and wants to enter to cleanse it.<br>
-                <strong>Decision:</strong> <span class="tag severe">DENY / CHASE OFF</span><br>
-                <strong>Reason:</strong> He is an anomaly trying to sacrifice you.
+                <strong>{{ t('walkthroughPage.day4.nightEvent.visitor') }}</strong> {{ t('walkthroughPage.day4.nightEvent.visitorText') }}<br>
+                <strong>{{ t('walkthroughPage.day4.nightEvent.story') }}</strong> {{ t('walkthroughPage.day4.nightEvent.storyText') }}<br>
+                <strong>{{ t('walkthroughPage.day4.nightEvent.decision') }}</strong> <span class="tag severe">{{ t('walkthroughPage.day4.nightEvent.decisionText') }}</span><br>
+                <strong>{{ t('walkthroughPage.day4.nightEvent.reason') }}</strong> {{ t('walkthroughPage.day4.nightEvent.reasonText') }}
               </div>
             </div>
 
@@ -202,23 +202,23 @@
           <!-- Day 5 -->
           <section id="day5" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 5: The Smiling Woman</h2>
-              <span class="tag high">Focus: Psychological Horror</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day5.title') }}</h2>
+              <span class="tag high">{{ t('walkthroughPage.day5.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">New Product</h3>
-              <p>Pickles.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day5.newProduct.title') }}</h3>
+              <p>{{ t('walkthroughPage.day5.newProduct.text') }}</p>
 
-              <h3 class="subsection-title">Sticky Notes</h3>
-              <p>You will start finding yellow notes (Lore) revealing the store might be a living organism.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day5.stickyNotes.title') }}</h3>
+              <p>{{ t('walkthroughPage.day5.stickyNotes.text') }}</p>
 
-              <h3 class="subsection-title">Night Shift Event</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day5.nightEvent.title') }}</h3>
               <div class="alert-box danger">
-                <strong>Visitor:</strong> The Smiling Woman (Black raincoat, huge grin).<br>
-                <strong>Story:</strong> Claims she "used to work here" and is scared.<br>
-                <strong>Decision:</strong> <span class="tag severe">DENY / CHASE OFF</span><br>
-                <strong>Reason:</strong> Her story is a lie, and her appearance triggers static/audio cues.
+                <strong>{{ t('walkthroughPage.day5.nightEvent.visitor') }}</strong> {{ t('walkthroughPage.day5.nightEvent.visitorText') }}<br>
+                <strong>{{ t('walkthroughPage.day5.nightEvent.story') }}</strong> {{ t('walkthroughPage.day5.nightEvent.storyText') }}<br>
+                <strong>{{ t('walkthroughPage.day5.nightEvent.decision') }}</strong> <span class="tag severe">{{ t('walkthroughPage.day5.nightEvent.decisionText') }}</span><br>
+                <strong>{{ t('walkthroughPage.day5.nightEvent.reason') }}</strong> {{ t('walkthroughPage.day5.nightEvent.reasonText') }}
               </div>
             </div>
           </section>
@@ -226,23 +226,23 @@
           <!-- Day 6 -->
           <section id="day6" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 6: The Drunk & The Imposter</h2>
-              <span class="tag severe">Focus: Spotting the difference</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day6.title') }}</h2>
+              <span class="tag severe">{{ t('walkthroughPage.day6.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">New Product</h3>
-              <p>Minced Meat.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day6.newProduct.title') }}</h3>
+              <p>{{ t('walkthroughPage.day6.newProduct.text') }}</p>
 
-              <h3 class="subsection-title">Problem Customer: Boozer</h3>
-              <p>Drunk guy in green jacket. He will try to drink in the store. You must tell him to leave or pay.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day6.boozer.title') }}</h3>
+              <p>{{ t('walkthroughPage.day6.boozer.text') }}</p>
 
-              <h3 class="subsection-title">Night Shift Event</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day6.nightEvent.title') }}</h3>
               <div class="alert-box danger">
-                <strong>Visitor:</strong> Stalled Car Man (Looks exactly like Boozer but acts sober/weird).<br>
-                <strong>Story:</strong> Claims his car stalled.<br>
-                <strong>Decision:</strong> <span class="tag severe">DENY</span><br>
-                <strong>Reason:</strong> It's a Mimic of the drunk guy you saw earlier.
+                <strong>{{ t('walkthroughPage.day6.nightEvent.visitor') }}</strong> {{ t('walkthroughPage.day6.nightEvent.visitorText') }}<br>
+                <strong>{{ t('walkthroughPage.day6.nightEvent.story') }}</strong> {{ t('walkthroughPage.day6.nightEvent.storyText') }}<br>
+                <strong>{{ t('walkthroughPage.day6.nightEvent.decision') }}</strong> <span class="tag severe">{{ t('walkthroughPage.day6.nightEvent.decisionText') }}</span><br>
+                <strong>{{ t('walkthroughPage.day6.nightEvent.reason') }}</strong> {{ t('walkthroughPage.day6.nightEvent.reasonText') }}
               </div>
             </div>
           </section>
@@ -250,23 +250,23 @@
           <!-- Day 7 -->
           <section id="day7" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 7: The Stranger (Climax)</h2>
-              <span class="tag nightmare">Focus: The Final Test</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day7.title') }}</h2>
+              <span class="tag nightmare">{{ t('walkthroughPage.day7.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">New Product</h3>
-              <p>Cat Food.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day7.newProduct.title') }}</h3>
+              <p>{{ t('walkthroughPage.day7.newProduct.text') }}</p>
 
-              <h3 class="subsection-title">Environment</h3>
-              <p>The sky turns Blood Red.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day7.environment.title') }}</h3>
+              <p>{{ t('walkthroughPage.day7.environment.text') }}</p>
 
-              <h3 class="subsection-title">Night Shift Event (BOSS)</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day7.nightEvent.title') }}</h3>
               <div class="alert-box danger">
-                <strong>Visitor:</strong> The Stranger (Masked figure in green robes).<br>
-                <strong>Interaction:</strong> He reveals the store is a cage. He asks you to help him destroy it or "join the family."<br>
-                <strong>Decision:</strong> <span class="tag success">REFUSE HIM</span>. Say "I have to protect this place."<br>
-                <strong>Result:</strong> You remain loyal to your duty (essential for the Good Ending).
+                <strong>{{ t('walkthroughPage.day7.nightEvent.visitor') }}</strong> {{ t('walkthroughPage.day7.nightEvent.visitorText') }}<br>
+                <strong>{{ t('walkthroughPage.day7.nightEvent.interaction') }}</strong> {{ t('walkthroughPage.day7.nightEvent.interactionText') }}<br>
+                <strong>{{ t('walkthroughPage.day7.nightEvent.decision') }}</strong> <span class="tag success">{{ t('walkthroughPage.day7.nightEvent.decisionText') }}</span>{{ t('walkthroughPage.day7.nightEvent.decisionText2') }}<br>
+                <strong>{{ t('walkthroughPage.day7.nightEvent.result') }}</strong> {{ t('walkthroughPage.day7.nightEvent.resultText') }}
               </div>
             </div>
           </section>
@@ -274,22 +274,22 @@
           <!-- Day 8 -->
           <section id="day8" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Day 8: The End</h2>
-              <span class="tag success">Focus: Victory Lap</span>
+              <h2 class="section-title">{{ t('walkthroughPage.day8.title') }}</h2>
+              <span class="tag success">{{ t('walkthroughPage.day8.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">Morning</h3>
-              <p>The store is on fire.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day8.morning.title') }}</h3>
+              <p>{{ t('walkthroughPage.day8.morning.text') }}</p>
 
-              <h3 class="subsection-title">The Parking Lot</h3>
-              <p>All the customers you saved/served (Tiny Bob, Karen, Coin Man, etc.) are standing outside applauding you.</p>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day8.parkingLot.title') }}</h3>
+              <p>{{ t('walkthroughPage.day8.parkingLot.text') }}</p>
 
-              <h3 class="subsection-title">The Bus</h3>
+              <h3 class="subsection-title">{{ t('walkthroughPage.day8.bus.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Arrival:</strong> The bus arrives.</li>
-                <li><strong>Action:</strong> Get on the bus. Pay your fare (2 coins). Sit down.</li>
-                <li><strong>Result:</strong> Good Ending Achieved. The title screen changes to "HelloMart".</li>
+                <li><strong>{{ t('walkthroughPage.day8.bus.arrival') }}</strong> {{ t('walkthroughPage.day8.bus.arrivalText') }}</li>
+                <li><strong>{{ t('walkthroughPage.day8.bus.action') }}</strong> {{ t('walkthroughPage.day8.bus.actionText') }}</li>
+                <li><strong>{{ t('walkthroughPage.day8.bus.result') }}</strong> {{ t('walkthroughPage.day8.bus.resultText') }}</li>
               </ul>
             </div>
           </section>
@@ -302,7 +302,9 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const activeSection = ref('');
 
 onMounted(() => {

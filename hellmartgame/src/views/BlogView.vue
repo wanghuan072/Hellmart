@@ -2,8 +2,8 @@
   <main class="blog-page">
     <div class="hero-page">
       <div class="container">
-        <h1>Hellmart Blog: Latest News & Strategy Guides</h1>
-        <p>Your go-to resource for deep dives, technical fixes, lore theories, and survival tips that keep you alive on the night shift.</p>
+        <h1>{{ t('blogPage.hero.title') }}</h1>
+        <p>{{ t('blogPage.hero.subtitle') }}</p>
       </div>
     </div>
 
@@ -27,7 +27,7 @@
             </div>
             <h2 class="blog-title">{{ post.title }}</h2>
             <p class="description">{{ post.description }}</p>
-            <span class="read-more">Read Article &rarr;</span>
+            <span class="read-more">{{ t('blogPage.readMore') }}</span>
           </div>
         </article>
       </div>
@@ -36,12 +36,28 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import blogData from '../data/blog.js'
+import { useI18n } from 'vue-i18n'
+import { loadBlogData } from '../data/blog.js'
+import { useLocalizedPath } from '../composables/useLocalizedPath'
 
+const { t, locale } = useI18n()
 const router = useRouter()
-const posts = ref(blogData)
+const { getLocalizedPath } = useLocalizedPath()
+const posts = ref([])
+
+const loadData = async (lang) => {
+  posts.value = await loadBlogData(lang)
+}
+
+onMounted(() => {
+  loadData(locale.value)
+})
+
+watch(locale, (newLocale) => {
+  loadData(newLocale)
+})
 
 const formatDate = (dateString) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -49,7 +65,7 @@ const formatDate = (dateString) => {
 }
 
 const navigateToDetail = (slug) => {
-  router.push(`/blog/${slug}`)
+  router.push(getLocalizedPath(`/blog/${slug}`))
 }
 </script>
 

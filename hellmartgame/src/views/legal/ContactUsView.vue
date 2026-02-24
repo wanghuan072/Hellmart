@@ -2,8 +2,8 @@
   <div class="legal-page">
     <div class="hero-page">
       <div class="container">
-        <h1>Contact Us</h1>
-        <p>Department of Human Resources & Anomalous Incident Reporting Channels</p>
+        <h1>{{ t('contactUsPage.hero.title') }}</h1>
+        <p>{{ t('contactUsPage.hero.subtitle') }}</p>
       </div>
     </div>
 
@@ -11,47 +11,47 @@
       <div class="container">
         <div class="content-wrapper">
           <div class="legal-text">
-            <h2>Get in Touch</h2>
+            <h2>{{ t('contactUsPage.sections.getInTouch.title') }}</h2>
             <p>
-              We'd love to hear from you! Whether you have questions, suggestions, feedback, or just want to say hello, please don't hesitate to contact us.
+              {{ t('contactUsPage.sections.getInTouch.text') }}
             </p>
 
-            <h2>Email</h2>
+            <h2>{{ t('contactUsPage.sections.email.title') }}</h2>
             <p>
-              For general inquiries, please email us at: <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a>
+              {{ t('contactUsPage.sections.email.text') }} <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a>
             </p>
 
-            <h2>What We Can Help With</h2>
+            <h2>{{ t('contactUsPage.sections.help.title') }}</h2>
             <p>
-              We're here to assist with:
+              {{ t('contactUsPage.sections.help.text') }}
             </p>
             <ul>
-              <li>Questions about our website or content</li>
-              <li>Suggestions for improvements or new features</li>
-              <li>Reporting errors or outdated information</li>
-              <li>Copyright or legal inquiries</li>
-              <li>Partnership or collaboration opportunities</li>
-              <li>General feedback about Hellmart Game</li>
+              <li>{{ t('contactUsPage.sections.help.item1') }}</li>
+              <li>{{ t('contactUsPage.sections.help.item2') }}</li>
+              <li>{{ t('contactUsPage.sections.help.item3') }}</li>
+              <li>{{ t('contactUsPage.sections.help.item4') }}</li>
+              <li>{{ t('contactUsPage.sections.help.item5') }}</li>
+              <li>{{ t('contactUsPage.sections.help.item6') }}</li>
             </ul>
 
-            <h2>Response Time</h2>
+            <h2>{{ t('contactUsPage.sections.response.title') }}</h2>
             <p>
-              We strive to respond to all inquiries within 2-3 business days. Please be patient as we review and respond to your message.
+              {{ t('contactUsPage.sections.response.text') }}
             </p>
 
-            <h2>Community Contributions</h2>
+            <h2>{{ t('contactUsPage.sections.contributions.title') }}</h2>
             <p>
-              If you'd like to contribute content, corrections, or updates to our website, please contact us with details about your contribution. We appreciate all community support!
+              {{ t('contactUsPage.sections.contributions.text') }}
             </p>
 
-            <h2>Privacy</h2>
+            <h2>{{ t('contactUsPage.sections.privacy.title') }}</h2>
             <p>
-              Any information you provide in your correspondence will be kept confidential and used only for the purpose of responding to your inquiry. Please review our <a href="/privacy-policy">Privacy Policy</a> for more information.
+              {{ t('contactUsPage.sections.privacy.text') }} <a :href="getLocalizedPath('/privacy-policy')">{{ t('contactUsPage.sections.privacy.link') }}</a>{{ t('contactUsPage.sections.privacy.textEnd') }}
             </p>
 
-            <h2>Thank You</h2>
+            <h2>{{ t('contactUsPage.sections.thankYou.title') }}</h2>
             <p>
-              Thank you for your interest in Hellmart Game. We look forward to hearing from you!
+              {{ t('contactUsPage.sections.thankYou.text') }}
             </p>
           </div>
         </div>
@@ -61,18 +61,9 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-onMounted(() => {
-  document.title = 'Contact Us - Hellmart Game'
-  let metaDesc = document.querySelector('meta[name="description"]')
-  if (!metaDesc) {
-    metaDesc = document.createElement('meta')
-    metaDesc.name = "description"
-    document.head.appendChild(metaDesc)
-  }
-  metaDesc.content = 'Contact Hellmart Game. Get in touch with us for questions, suggestions, feedback, or inquiries about our website and services.'
-})
+const { t } = useI18n()
 </script>
 
 <style scoped>

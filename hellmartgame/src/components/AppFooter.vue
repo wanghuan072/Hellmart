@@ -1,4 +1,9 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+import { useLocalizedPath } from '../composables/useLocalizedPath'
+
+const { t } = useI18n()
+const { getLocalizedPath } = useLocalizedPath()
 </script>
 
 <template>
@@ -11,38 +16,37 @@
             <span class="footer-logo-text">Hellmart Game</span>
           </div>
           <p class="footer-desc">
-            The #1 community resource for Hellmart players. 
-            Explore our comprehensive wiki, detailed walkthroughs, and survival guides to master the night shift and uncover every ending.
+            {{ t('common.footer.brandDesc') }}
           </p>
         </div>
         
         <div class="link-column">
-          <h2>Navigate</h2>
+          <h2>{{ t('common.footer.navigate') }}</h2>
           <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/wiki">Wiki</router-link></li>
-            <li><router-link to="/walkthrough">Walkthrough</router-link></li>
-            <li><router-link to="/endings">Endings</router-link></li>
-            <li><router-link to="/mechanics">Mechanics</router-link></li>
-            <li><router-link to="/blog">Blog</router-link></li>
+            <li><router-link :to="getLocalizedPath('/')">{{ t('common.nav.home') }}</router-link></li>
+            <li><router-link :to="getLocalizedPath('/wiki')">{{ t('common.nav.wiki') }}</router-link></li>
+            <li><router-link :to="getLocalizedPath('/walkthrough')">{{ t('common.nav.walkthrough') }}</router-link></li>
+            <li><router-link :to="getLocalizedPath('/endings')">{{ t('common.nav.endings') }}</router-link></li>
+            <li><router-link :to="getLocalizedPath('/mechanics')">{{ t('common.nav.mechanics') }}</router-link></li>
+            <li><router-link :to="getLocalizedPath('/blog')">{{ t('common.nav.blog') }}</router-link></li>
           </ul>
         </div>
 
         <div class="link-column">
-          <h2>Legal</h2>
+          <h2>{{ t('common.footer.legal') }}</h2>
           <ul>
-            <li><a href="/privacy-policy" rel="noopener noreferrer nofollow">Privacy Policy</a></li>
-            <li><a href="/terms-of-service" rel="noopener noreferrer nofollow">Terms of Service</a></li>
-            <li><a href="/copyright" rel="noopener noreferrer nofollow">Copyright</a></li>
-            <li><a href="/about-us" rel="noopener noreferrer nofollow">About Us</a></li>
-            <li><a href="/contact-us" rel="noopener noreferrer nofollow">Contact Us</a></li>
+            <li><a :href="getLocalizedPath('/privacy-policy')" rel="noopener noreferrer nofollow">{{ t('common.footer.privacyPolicy') }}</a></li>
+            <li><a :href="getLocalizedPath('/terms-of-service')" rel="noopener noreferrer nofollow">{{ t('common.footer.termsOfService') }}</a></li>
+            <li><a :href="getLocalizedPath('/copyright')" rel="noopener noreferrer nofollow">{{ t('common.footer.copyright') }}</a></li>
+            <li><a :href="getLocalizedPath('/about-us')" rel="noopener noreferrer nofollow">{{ t('common.footer.aboutUs') }}</a></li>
+            <li><a :href="getLocalizedPath('/contact-us')" rel="noopener noreferrer nofollow">{{ t('common.footer.contactUs') }}</a></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2026 hellmartgame.com. All rights reserved. Updated: 2026-02-05.</p>
-        <p>This is an independent fan site created for informational purposes only. All trademarks and copyrights belong to their respective owners. Contact: <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a></p>
+        <p>{{ t('common.footer.bottom1') }}</p>
+        <p>{{ t('common.footer.bottom2Prefix') }} <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a></p>
       </div>
     </div>
   </footer>

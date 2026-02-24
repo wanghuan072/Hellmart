@@ -2,8 +2,8 @@
   <div class="legal-page">
     <div class="hero-page">
       <div class="container">
-        <h1>About Us</h1>
-        <p>Hellmart Corp: Our History, Mission, and Employment Opportunities</p>
+        <h1>{{ t('aboutUsPage.hero.title') }}</h1>
+        <p>{{ t('aboutUsPage.hero.subtitle') }}</p>
       </div>
     </div>
 
@@ -11,54 +11,54 @@
       <div class="container">
         <div class="content-wrapper">
           <div class="legal-text">
-            <h2>Welcome to Hellmart</h2>
+            <h2>{{ t('aboutUsPage.sections.welcome.title') }}</h2>
             <p>
-              <RouterLink to="/">Hellmart Game</RouterLink> is the premier destination for survival horror enthusiasts and retail simulation strategists. Born from the collective nightmares of service industry workers, our game challenges players to manage the unmanageable: a convenience store located on the threshold of the abyss.
+              <RouterLink :to="getLocalizedPath('/')">{{ t('aboutUsPage.sections.welcome.text1') }}</RouterLink> {{ t('aboutUsPage.sections.welcome.text1Link') }}
             </p>
             <p>
-              This website serves as the official employee handbook and survival guide. Here, we archive the latest anomalous entity reports (<RouterLink to="/wiki">Wiki</RouterLink>), shift protocols (<RouterLink to="/walkthrough">Walkthroughs</RouterLink>), and corporate mandates (<RouterLink to="/blog">Blog</RouterLink>) to help you survive your 7-day contract.
+              {{ t('aboutUsPage.sections.welcome.text2') }}<RouterLink :to="getLocalizedPath('/wiki')">{{ t('aboutUsPage.sections.welcome.text2Wiki') }}</RouterLink>{{ t('aboutUsPage.sections.welcome.text2Middle') }}<RouterLink :to="getLocalizedPath('/walkthrough')">{{ t('aboutUsPage.sections.welcome.text2Walkthrough') }}</RouterLink>{{ t('aboutUsPage.sections.welcome.text2Middle2') }}<RouterLink :to="getLocalizedPath('/blog')">{{ t('aboutUsPage.sections.welcome.text2Blog') }}</RouterLink>{{ t('aboutUsPage.sections.welcome.text2End') }}
             </p>
 
             <div class="image-block">
               <img src="/images/about-img.webp" alt="Hellmart Storefront" loading="lazy" />
-              <p class="caption">The facade of our flagship location. Open 24/7, eternally.</p>
+              <p class="caption">{{ t('aboutUsPage.sections.welcome.imageCaption') }}</p>
             </div>
 
-            <h2>Our Mission</h2>
+            <h2>{{ t('aboutUsPage.sections.mission.title') }}</h2>
             <p>
-              At Hellmart Corp, our mission is simple: <strong>Profit at any cost</strong>. But for you, the player, the mission is survival. We aim to provide:
+              {{ t('aboutUsPage.sections.mission.text') }} <strong>{{ t('aboutUsPage.sections.mission.textBold') }}</strong>{{ t('aboutUsPage.sections.mission.textEnd') }}
             </p>
             <ul>
-              <li><strong>Immersive Horror:</strong> A blend of mundane retail tasks and eldritch terror.</li>
-              <li><strong>Strategic Gameplay:</strong> Resource management where the currency is your sanity.</li>
-              <li><strong>Deep Lore:</strong> A fragmented narrative hidden within item descriptions and customer dialogues. Uncover the truth behind every <RouterLink to="/endings">Ending</RouterLink>.</li>
-              <li><strong>Community Driven Development:</strong> We listen to our "employees" (players) to refine the suffering (gameplay).</li>
+              <li><strong>{{ t('aboutUsPage.sections.mission.item1') }}</strong> {{ t('aboutUsPage.sections.mission.item1Text') }}</li>
+              <li><strong>{{ t('aboutUsPage.sections.mission.item2') }}</strong> {{ t('aboutUsPage.sections.mission.item2Text') }}</li>
+              <li><strong>{{ t('aboutUsPage.sections.mission.item3') }}</strong> {{ t('aboutUsPage.sections.mission.item3Text') }} <RouterLink :to="getLocalizedPath('/endings')">{{ t('aboutUsPage.sections.mission.item3Link') }}</RouterLink>{{ t('aboutUsPage.sections.mission.item3TextEnd') }}</li>
+              <li><strong>{{ t('aboutUsPage.sections.mission.item4') }}</strong> {{ t('aboutUsPage.sections.mission.item4Text') }}</li>
             </ul>
 
-            <h2>The Hellmart Experience</h2>
+            <h2>{{ t('aboutUsPage.sections.experience.title') }}</h2>
             <p>
-              Every shift at Hellmart is unique. One moment you're restocking sodas, the next you're banishing a customer who has too many eyes. Our team has worked tirelessly to create an atmosphere that is both familiar and deeply unsettling.
+              {{ t('aboutUsPage.sections.experience.text1') }}
             </p>
             <p>
-              We believe in the power of environmental storytelling. Every aisle tells a story, and every product might be a trap. The game is designed to test your observation skills, your reflexes, and your ability to follow strict, often contradictory, rules. Master the <RouterLink to="/mechanics">Game Mechanics</RouterLink> to increase your survival odds.
+              {{ t('aboutUsPage.sections.experience.text2') }} <RouterLink :to="getLocalizedPath('/mechanics')">{{ t('aboutUsPage.sections.experience.text2Link') }}</RouterLink>{{ t('aboutUsPage.sections.experience.text2End') }}
             </p>
 
             <div class="image-block">
               <img src="/images/hellmart-01.webp" alt="Inside Hellmart" loading="lazy" />
-              <p class="caption">A quiet moment before the night rush. Keep the shelves stocked.</p>
+              <p class="caption">{{ t('aboutUsPage.sections.experience.imageCaption') }}</p>
             </div>
 
-            <h2>Join the Workforce</h2>
+            <h2>{{ t('aboutUsPage.sections.join.title') }}</h2>
             <p>
-              We are always looking for new talent. Whether you're a player sharing your strategies or a developer interested in our tech stack, Hellmart welcomes you.
+              {{ t('aboutUsPage.sections.join.text1') }}
             </p>
             <p>
-              Connect with us through our official channels. Share your survival stories, report bugs (anomalies), and help us build the ultimate retail nightmare.
+              {{ t('aboutUsPage.sections.join.text2') }}
             </p>
 
-            <h2>Contact Us</h2>
+            <h2>{{ t('aboutUsPage.sections.contact.title') }}</h2>
             <p>
-              For press inquiries, bug reports, or if you just want to scream into the void, reach us at:
+              {{ t('aboutUsPage.sections.contact.text') }}
               <a href="mailto:wyong@hellmartgame.com">wyong@hellmartgame.com</a>
             </p>
           </div>
@@ -69,18 +69,11 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useLocalizedPath } from '../../composables/useLocalizedPath'
 
-onMounted(() => {
-  document.title = 'About Us - Hellmart Game'
-  let metaDesc = document.querySelector('meta[name="description"]')
-  if (!metaDesc) {
-    metaDesc = document.createElement('meta')
-    metaDesc.name = "description"
-    document.head.appendChild(metaDesc)
-  }
-  metaDesc.content = 'Learn about Hellmart Game, the survival retail horror simulation. Discover our lore, mission, and the team behind the nightmare.'
-})
+const { t } = useI18n()
+const { getLocalizedPath } = useLocalizedPath()
 </script>
 
 <style scoped>

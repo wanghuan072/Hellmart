@@ -5,27 +5,27 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <span class="badge store-badge">STAFF ONLY</span>
-            <h1 class="hero-title">Hellmart Game, Endings, Wiki, Strategy Guide & Walkthrough</h1>
-            <p class="hero-subtitle">Night Shift Protocol: Survive until 6:00 AM. Ensure all shelves are stocked, floors are clean, and containment procedures for Class-C entities are strictly followed. Failure to comply will result in immediate termination.</p>
+            <span class="badge store-badge">{{ t('homePage.hero.badge') }}</span>
+            <h1 class="hero-title">{{ t('homePage.hero.title') }}</h1>
+            <p class="hero-subtitle">{{ t('homePage.hero.subtitle') }}</p>
             
             <div class="hero-actions">
-              <router-link to="/walkthrough" class="btn primary">Start Shift</router-link>
-              <router-link to="/wiki" class="btn secondary">Employee Manual</router-link>
+              <router-link :to="getLocalizedPath('/walkthrough')" class="btn primary">{{ t('homePage.hero.button1') }}</router-link>
+              <router-link :to="getLocalizedPath('/wiki')" class="btn secondary">{{ t('homePage.hero.button2') }}</router-link>
             </div>
             
             <div class="hero-stats">
               <div class="stat">
-                <span class="label">Store Status</span>
-                <span class="value blink-red">OPEN 24/7</span>
+                <span class="label">{{ t('homePage.hero.stats.label1') }}</span>
+                <span class="value blink-red">{{ t('homePage.hero.stats.value1') }}</span>
               </div>
               <div class="stat">
-                <span class="label">Incidents</span>
-                <span class="value">0 Days Since Last Accident</span>
+                <span class="label">{{ t('homePage.hero.stats.label2') }}</span>
+                <span class="value">{{ t('homePage.hero.stats.value2') }}</span>
               </div>
               <div class="stat">
-                <span class="label">Platform</span>
-                <span class="value">PC (Steam)</span>
+                <span class="label">{{ t('homePage.hero.stats.label3') }}</span>
+                <span class="value">{{ t('homePage.hero.stats.value3') }}</span>
               </div>
             </div>
           </div>
@@ -36,44 +36,44 @@
     <!-- Quick Guides Section -->
     <section class="section quick-guides-section">
       <div class="container">
-        <h2 class="section-title">Hellmart Game: Quick Link</h2>
-        <p class="section-subtitle">Essential knowledge for new employees.</p>
+        <h2 class="section-title">{{ t('homePage.quickGuides.title') }}</h2>
+        <p class="section-subtitle">{{ t('homePage.quickGuides.subtitle') }}</p>
         
         <div class="grid-3">
           <div class="card">
             <div class="card-image">
               <img src="/images/link-01.webp" alt="Entity Database">
               <div class="card-overlay"></div>
-              <div class="price-tag">FREE</div>
+              <div class="price-tag">{{ t('homePage.quickGuides.card1.tag') }}</div>
             </div>
             <div class="card-content">
-              <h3 class="card-title">Entity Database</h3>
-              <p class="card-text">Identify the entities trying to enter the store. Learn who to trust and who to deny.</p>
-              <router-link to="/wiki" class="card-link">Read Protocol &rarr;</router-link>
+              <h3 class="card-title">{{ t('homePage.quickGuides.card1.title') }}</h3>
+              <p class="card-text">{{ t('homePage.quickGuides.card1.text') }}</p>
+              <router-link :to="getLocalizedPath('/wiki')" class="card-link">{{ t('homePage.quickGuides.card1.link') }}</router-link>
             </div>
           </div>
           <div class="card">
             <div class="card-image">
               <img src="/images/link-02.webp" alt="Survival Walkthrough">
               <div class="card-overlay"></div>
-              <div class="price-tag">NEW</div>
+              <div class="price-tag">{{ t('homePage.quickGuides.card2.tag') }}</div>
             </div>
             <div class="card-content">
-              <h3 class="card-title">7-Day Walkthrough</h3>
-              <p class="card-text">Standard operating procedures for surviving from Day 1 to Day 7.</p>
-              <router-link to="/walkthrough" class="card-link">Start Training &rarr;</router-link>
+              <h3 class="card-title">{{ t('homePage.quickGuides.card2.title') }}</h3>
+              <p class="card-text">{{ t('homePage.quickGuides.card2.text') }}</p>
+              <router-link :to="getLocalizedPath('/walkthrough')" class="card-link">{{ t('homePage.quickGuides.card2.link') }}</router-link>
             </div>
           </div>
           <div class="card">
             <div class="card-image">
               <img src="/images/link-03.webp" alt="All Endings Guide">
               <div class="card-overlay"></div>
-              <div class="price-tag">HOT</div>
+              <div class="price-tag">{{ t('homePage.quickGuides.card3.tag') }}</div>
             </div>
             <div class="card-content">
-              <h3 class="card-title">All Endings Guide</h3>
-              <p class="card-text">Unlock all 3 endings: Owner, Loop, and Monster. Master the Karma system.</p>
-              <router-link to="/endings" class="card-link">View Outcomes &rarr;</router-link>
+              <h3 class="card-title">{{ t('homePage.quickGuides.card3.title') }}</h3>
+              <p class="card-text">{{ t('homePage.quickGuides.card3.text') }}</p>
+              <router-link :to="getLocalizedPath('/endings')" class="card-link">{{ t('homePage.quickGuides.card3.link') }}</router-link>
             </div>
           </div>
         </div>
@@ -83,38 +83,38 @@
     <!-- All Endings Section -->
     <section class="section all-endings-section">
       <div class="container">
-        <h2 class="section-title">Hellmart Game: All Endings</h2>
-        <p class="section-subtitle">Complete guide to all termination scenarios.</p>
+        <h2 class="section-title">{{ t('homePage.endings.title') }}</h2>
+        <p class="section-subtitle">{{ t('homePage.endings.subtitle') }}</p>
         
         <div class="grid-3">
           <div class="card ending-card">
             <div class="card-image">
-              <div class="ending-badge bad">BAD</div>
+              <div class="ending-badge bad">{{ t('homePage.endings.ending1.badge') }}</div>
               <img src="/images/endings-01.webp" alt="Ending 2: Groundhog Day">
             </div>
             <div class="card-content">
-              <h3 class="card-title">Ending: Groundhog Day</h3>
-              <p class="card-text">Trapped in an eternal loop. The most common fate for new employees.</p>
+              <h3 class="card-title">{{ t('homePage.endings.ending1.title') }}</h3>
+              <p class="card-text">{{ t('homePage.endings.ending1.text') }}</p>
             </div>
           </div>
           <div class="card ending-card">
             <div class="card-image">
-              <div class="ending-badge neutral">EVIL</div>
+              <div class="ending-badge neutral">{{ t('homePage.endings.ending2.badge') }}</div>
               <img src="/images/endings-02.webp" alt="Ending 3: Judgment Night">
             </div>
             <div class="card-content">
-              <h3 class="card-title">Ending: Judgment Night</h3>
-              <p class="card-text">You stole, you killed, and now you have become one of them.</p>
+              <h3 class="card-title">{{ t('homePage.endings.ending2.title') }}</h3>
+              <p class="card-text">{{ t('homePage.endings.ending2.text') }}</p>
             </div>
           </div>
           <div class="card ending-card">
             <div class="card-image">
-              <div class="ending-badge true">TRUE ENDING</div>
+              <div class="ending-badge true">{{ t('homePage.endings.ending3.badge') }}</div>
               <img src="/images/endings-03.webp" alt="Ending 1: Keys to the Kingdom">
             </div>
             <div class="card-content">
-              <h3 class="card-title">Ending: Keys to the Kingdom</h3>
-              <p class="card-text">Prove your loyalty, protect the store, and become the new Owner.</p>
+              <h3 class="card-title">{{ t('homePage.endings.ending3.title') }}</h3>
+              <p class="card-text">{{ t('homePage.endings.ending3.text') }}</p>
             </div>
           </div>
         </div>
@@ -124,24 +124,24 @@
     <!-- Hellmart Demo Screenshots Section -->
     <section class="section screenshots-section">
       <div class="container">
-        <h2 class="section-title">Hellmart Demo Screenshots</h2>
-        <p class="section-subtitle">Surveillance footage from previous shifts.</p>
+        <h2 class="section-title">{{ t('homePage.screenshots.title') }}</h2>
+        <p class="section-subtitle">{{ t('homePage.screenshots.subtitle') }}</p>
         <div class="grid-4">
           <div class="screenshot-item">
             <img src="/images/hellmart-01.webp" alt="Screenshot 1">
-            <div class="cam-overlay">CAM 01</div>
+            <div class="cam-overlay">{{ t('homePage.screenshots.cam1') }}</div>
           </div>
           <div class="screenshot-item">
             <img src="/images/hellmart-02.webp" alt="Screenshot 2">
-            <div class="cam-overlay">CAM 02</div>
+            <div class="cam-overlay">{{ t('homePage.screenshots.cam2') }}</div>
           </div>
           <div class="screenshot-item">
             <img src="/images/hellmart-03.webp" alt="Screenshot 3">
-            <div class="cam-overlay">CAM 03</div>
+            <div class="cam-overlay">{{ t('homePage.screenshots.cam3') }}</div>
           </div>
           <div class="screenshot-item">
             <img src="/images/hellmart-04.webp" alt="Screenshot 4">
-            <div class="cam-overlay">CAM 04</div>
+            <div class="cam-overlay">{{ t('homePage.screenshots.cam4') }}</div>
           </div>
         </div>
       </div>
@@ -152,11 +152,11 @@
       <div class="container">
         <div class="what-is-content">
           <div class="text-col">
-            <h2 class="section-title" style="text-align: left;">What is Hellmart</h2>
-            <p class="section-subtitle" style="text-align: left;">The night shift is waiting for you.</p>
-            <p class="intro-text">HELLMART is a psychological horror survival simulation. As the night shift clerk at a convenience store in the middle of nowhere, your job is simple: serve customers, restock shelves, and don't let the darkness in.</p>
-            <p class="intro-text">Management advises ignoring any hallucinations, strange noises, or customers with too many limbs. Your safety is not guaranteed, but your paycheck is.</p>
-            <router-link to="/mechanics" class="btn primary">Start Training</router-link>
+            <h2 class="section-title" style="text-align: left;">{{ t('homePage.whatIs.title') }}</h2>
+            <p class="section-subtitle" style="text-align: left;">{{ t('homePage.whatIs.subtitle') }}</p>
+            <p class="intro-text">{{ t('homePage.whatIs.text1') }}</p>
+            <p class="intro-text">{{ t('homePage.whatIs.text2') }}</p>
+            <router-link :to="getLocalizedPath('/mechanics')" class="btn primary">{{ t('homePage.whatIs.button') }}</router-link>
           </div>
           <div class="image-col">
             <img src="/images/about-img.webp" alt="Hellmart Gameplay">
@@ -168,12 +168,12 @@
     <!-- Blog Section (Renamed from Latest News & Guides) -->
     <section class="section latest-news-section">
       <div class="container">
-        <h2 class="section-title">Hellmart Game Blog</h2>
-        <p class="section-subtitle">Latest announcements from corporate.</p>
+        <h2 class="section-title">{{ t('homePage.blog.title') }}</h2>
+        <p class="section-subtitle">{{ t('homePage.blog.subtitle') }}</p>
         <div class="news-grid">
           <div v-for="post in homePosts" :key="post.id" class="news-item">
             <span class="news-date">{{ formatDate(post.publishDate) }}</span>
-            <router-link :to="`/blog/${post.addressBar}`" class="news-title">{{ post.title }}</router-link>
+            <router-link :to="getLocalizedPath(`/blog/${post.addressBar}`)" class="news-title">{{ post.title }}</router-link>
           </div>
         </div>
       </div>
@@ -182,32 +182,32 @@
     <!-- FAQ Section -->
     <section class="section faq-section">
       <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Read before signing your contract.</p>
+        <h2 class="section-title">{{ t('homePage.faq.title') }}</h2>
+        <p class="section-subtitle">{{ t('homePage.faq.subtitle') }}</p>
         <div class="faq-grid">
           <div class="faq-item">
-            <h3 class="faq-question">Does Father Grayson kill you?</h3>
-            <p class="faq-answer">Yes. Father Grayson is an anomaly. If you let him in, it triggers a Game Over. Watch for typos in his dialogue.</p>
+            <h3 class="faq-question">{{ t('homePage.faq.q1.question') }}</h3>
+            <p class="faq-answer">{{ t('homePage.faq.q1.answer') }}</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">Is Tiny Bob a monster?</h3>
-            <p class="faq-answer">No. Despite his terrifying appearance (tall, slender), Tiny Bob is a safe human customer. Letting him in is required for Quota.</p>
+            <h3 class="faq-question">{{ t('homePage.faq.q2.question') }}</h3>
+            <p class="faq-answer">{{ t('homePage.faq.q2.answer') }}</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">Can I fight back?</h3>
-            <p class="faq-answer">Not directly. You must use defense items (UV Light, Blinds) or simply deny entry. The Axe is only for specific events.</p>
+            <h3 class="faq-question">{{ t('homePage.faq.q3.question') }}</h3>
+            <p class="faq-answer">{{ t('homePage.faq.q3.answer') }}</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">How do I save my progress?</h3>
-            <p class="faq-answer">The game saves automatically after every successful shift (6:00 AM). If you die during a shift, you will restart the day. In Hardcore mode, death deletes your save.</p>
+            <h3 class="faq-question">{{ t('homePage.faq.q4.question') }}</h3>
+            <p class="faq-answer">{{ t('homePage.faq.q4.answer') }}</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">Why is my screen getting blurry?</h3>
-            <p class="faq-answer">This indicates low Sanity. You have likely witnessed a paranormal event or stayed in the dark too long. Find a light source immediately or take Sanity Pills.</p>
+            <h3 class="faq-question">{{ t('homePage.faq.q5.question') }}</h3>
+            <p class="faq-answer">{{ t('homePage.faq.q5.answer') }}</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">Is there Multiplayer?</h3>
-            <p class="faq-answer">No. Hellmart is a single-player experience designed to isolate you. You are alone on the night shift.</p>
+            <h3 class="faq-question">{{ t('homePage.faq.q6.question') }}</h3>
+            <p class="faq-answer">{{ t('homePage.faq.q6.answer') }}</p>
           </div>
         </div>
       </div>
@@ -216,12 +216,30 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import blogData from '../data/blog.js'
+import { computed, ref, onMounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { loadBlogData } from '../data/blog.js'
+import { useLocalizedPath } from '../composables/useLocalizedPath'
+
+const { t, locale } = useI18n()
+const { getLocalizedPath } = useLocalizedPath()
+const blogData = ref([])
+
+const loadData = async (lang) => {
+  blogData.value = await loadBlogData(lang)
+}
+
+onMounted(() => {
+  loadData(locale.value)
+})
+
+watch(locale, (newLocale) => {
+  loadData(newLocale)
+})
 
 // Filter blog posts for the homepage
 const homePosts = computed(() => {
-  return blogData.filter(post => post.isHome).slice(0, 4)
+  return blogData.value.filter(post => post.isHome).slice(0, 4)
 })
 
 const formatDate = (dateString) => {

@@ -2,8 +2,8 @@
   <main class="endings-page">
     <div class="hero-page">
       <div class="container">
-        <h1>Hellmart All Endings Guide: How to Unlock Every Fate</h1>
-        <p>Step-by-step guide to unlocking the Good, Bad, and Monster endings. Learn the specific requirements and choices for the True Ending.</p>
+        <h1>{{ t('endingsPage.hero.title') }}</h1>
+        <p>{{ t('endingsPage.hero.subtitle') }}</p>
       </div>
     </div>
 
@@ -12,12 +12,12 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
           <nav class="toc">
-            <h2 class="toc-title">Contents</h2>
+            <h2 class="toc-title">{{ t('endingsPage.toc.title') }}</h2>
             <ul class="toc-list">
-              <li><a href="#intro" :class="['toc-link', { active: activeSection === 'intro' }]" @click.prevent="scrollToSection('intro')">Introduction</a></li>
-              <li><a href="#ending1" :class="['toc-link', { active: activeSection === 'ending1' }]" @click.prevent="scrollToSection('ending1')">Ending 1: Owner</a></li>
-              <li><a href="#ending2" :class="['toc-link', { active: activeSection === 'ending2' }]" @click.prevent="scrollToSection('ending2')">Ending 2: Loop</a></li>
-              <li><a href="#ending3" :class="['toc-link', { active: activeSection === 'ending3' }]" @click.prevent="scrollToSection('ending3')">Ending 3: Monster</a></li>
+              <li><a href="#intro" :class="['toc-link', { active: activeSection === 'intro' }]" @click.prevent="scrollToSection('intro')">{{ t('endingsPage.toc.intro') }}</a></li>
+              <li><a href="#ending1" :class="['toc-link', { active: activeSection === 'ending1' }]" @click.prevent="scrollToSection('ending1')">{{ t('endingsPage.toc.ending1') }}</a></li>
+              <li><a href="#ending2" :class="['toc-link', { active: activeSection === 'ending2' }]" @click.prevent="scrollToSection('ending2')">{{ t('endingsPage.toc.ending2') }}</a></li>
+              <li><a href="#ending3" :class="['toc-link', { active: activeSection === 'ending3' }]" @click.prevent="scrollToSection('ending3')">{{ t('endingsPage.toc.ending3') }}</a></li>
             </ul>
           </nav>
         </aside>
@@ -27,32 +27,32 @@
           
           <!-- Intro -->
           <section id="intro" class="section-block">
-            <h2 class="section-title">Introduction: The Karma System</h2>
-            <p>Hellmart features a hidden "Karma" system. Every decision you make—from scanning items correctly to choosing dialogue options with the Stranger—pushes you toward one of three fates.</p>
+            <h2 class="section-title">{{ t('endingsPage.intro.title') }}</h2>
+            <p>{{ t('endingsPage.intro.text') }}</p>
             <div class="alert-box info">
-              <strong>Tip:</strong> Your "Customer Satisfaction" rating and interactions with key characters like Father Grayson and Tiny Bob are critical for determining your path.
+              <strong>{{ t('endingsPage.intro.tip') }}</strong> {{ t('endingsPage.intro.tipText') }}
             </div>
           </section>
 
           <!-- Ending 1 -->
           <section id="ending1" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Ending 1: Keys to the Kingdom (The "Owner" Ending)</h2>
-              <span class="tag success">Rating: 🟢 Best Ending</span>
+              <h2 class="section-title">{{ t('endingsPage.ending1.title') }}</h2>
+              <span class="tag success">{{ t('endingsPage.ending1.tag') }}</span>
             </div>
             
             <div class="content-body">
-              <h3 class="subsection-title">The Outcome</h3>
-              <p>You prove your loyalty. The Manager promotes you, giving you the keys to the store. The neon sign outside changes from "Hellmart" to "HelloMart". You are no longer a worker; you are part of the system.</p>
+              <h3 class="subsection-title">{{ t('endingsPage.ending1.outcome.title') }}</h3>
+              <p>{{ t('endingsPage.ending1.outcome.text') }}</p>
               
-              <h3 class="subsection-title">How to Unlock (Requirements)</h3>
+              <h3 class="subsection-title">{{ t('endingsPage.ending1.unlock.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Perfect Attendance:</strong> Survive all 7 days without dying.</li>
-                <li><strong>High KPI:</strong> You must meet the sales quota (Quota) on most days (at least 5/7 days).</li>
-                <li><strong>Zero Anomalies:</strong> Do NOT let any lethal monsters inside. Check the <router-link to="/wiki">Entity Database</router-link> for identification tips.</li>
-                <li><strong>Be Nice:</strong> Do not steal money. Do not be rude to customers (choose polite dialogue options).</li>
-                <li><strong>Good Deeds:</strong> Donate to Father Grayson ($10) if possible.</li>
-                <li><strong>Critical Choice:</strong> On Day 6, when the Stranger asks you to leave, reply: "I have to protect this place."</li>
+                <li><strong>{{ t('endingsPage.ending1.unlock.item1') }}</strong> {{ t('endingsPage.ending1.unlock.item1Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending1.unlock.item2') }}</strong> {{ t('endingsPage.ending1.unlock.item2Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending1.unlock.item3') }}</strong> {{ t('endingsPage.ending1.unlock.item3Text') }} <router-link :to="getLocalizedPath('/wiki')">{{ t('endingsPage.ending1.unlock.item3Link') }}</router-link> {{ t('endingsPage.ending1.unlock.item3TextEnd') }}</li>
+                <li><strong>{{ t('endingsPage.ending1.unlock.item4') }}</strong> {{ t('endingsPage.ending1.unlock.item4Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending1.unlock.item5') }}</strong> {{ t('endingsPage.ending1.unlock.item5Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending1.unlock.item6') }}</strong> {{ t('endingsPage.ending1.unlock.item6Text') }}</li>
               </ul>
             </div>
 
@@ -62,21 +62,21 @@
           <!-- Ending 2 -->
           <section id="ending2" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Ending 2: Groundhog Day (The "Loop" Ending)</h2>
-              <span class="tag neutral">Rating: ⚪ Neutral / Bad Ending</span>
+              <h2 class="section-title">{{ t('endingsPage.ending2.title') }}</h2>
+              <span class="tag neutral">{{ t('endingsPage.ending2.tag') }}</span>
             </div>
-            <p class="subtitle">(Most players get this on their first run)</p>
+            <p class="subtitle">{{ t('endingsPage.ending2.subtitle') }}</p>
 
             <div class="content-body">
-              <h3 class="subsection-title">The Outcome</h3>
-              <p>The clock strikes 6:00 AM on Day 7. You expect freedom. Instead, the phone rings. The Manager says: "Due to staffing shortages, your shift has been extended." The calendar rewinds back to Day 1. You are trapped in an eternal work cycle.</p>
+              <h3 class="subsection-title">{{ t('endingsPage.ending2.outcome.title') }}</h3>
+              <p>{{ t('endingsPage.ending2.outcome.text') }}</p>
               
-              <h3 class="subsection-title">How to Unlock</h3>
+              <h3 class="subsection-title">{{ t('endingsPage.ending2.unlock.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Mediocre Performance:</strong> Survive 7 days, but miss the Quota on some days.</li>
-                <li><strong>Mixed Karma:</strong> You didn't steal enough to trigger the Evil ending, but you weren't perfect enough for the Owner ending.</li>
-                <li><strong>Mixed Decisions:</strong> Sometimes let anomalies in, sometimes keep them out.</li>
-                <li>Simply playing the game "normally" usually results in this.</li>
+                <li><strong>{{ t('endingsPage.ending2.unlock.item1') }}</strong> {{ t('endingsPage.ending2.unlock.item1Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending2.unlock.item2') }}</strong> {{ t('endingsPage.ending2.unlock.item2Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending2.unlock.item3') }}</strong> {{ t('endingsPage.ending2.unlock.item3Text') }}</li>
+                <li>{{ t('endingsPage.ending2.unlock.item4') }}</li>
               </ul>
             </div>
 
@@ -86,21 +86,21 @@
           <!-- Ending 3 -->
           <section id="ending3" class="section-block">
             <div class="section-header-row">
-              <h2 class="section-title">Ending 3: Judgment Night (The "Monster" Ending)</h2>
-              <span class="tag danger">Rating: 🔴 Evil Ending</span>
+              <h2 class="section-title">{{ t('endingsPage.ending3.title') }}</h2>
+              <span class="tag danger">{{ t('endingsPage.ending3.tag') }}</span>
             </div>
 
             <div class="content-body">
-              <h3 class="subsection-title">The Outcome</h3>
-              <p>You succumb to the corruption. The store's security turns on you. Instead of dying, you transform. You kill the Manager when he arrives. The final shot implies you are now the monster that the next employee will have to face.</p>
+              <h3 class="subsection-title">{{ t('endingsPage.ending3.outcome.title') }}</h3>
+              <p>{{ t('endingsPage.ending3.outcome.text') }}</p>
               
-              <h3 class="subsection-title">How to Unlock</h3>
+              <h3 class="subsection-title">{{ t('endingsPage.ending3.unlock.title') }}</h3>
               <ul class="simple-list">
-                <li><strong>Max Bad Karma:</strong> Be the worst employee possible.</li>
-                <li><strong>Theft:</strong> Steal money from the register whenever possible (Total > $500).</li>
-                <li><strong>Sabotage:</strong> Deliberately let non-lethal anomalies (like The Shoplifter) inside or ignore them.</li>
-                <li><strong>Rude Dialogue:</strong> Choose aggressive options when talking to The Stranger or customers.</li>
-                <li><strong>Corruption:</strong> Stare at the "Shadow Man" in the aisles to increase your corruption level.</li>
+                <li><strong>{{ t('endingsPage.ending3.unlock.item1') }}</strong> {{ t('endingsPage.ending3.unlock.item1Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending3.unlock.item2') }}</strong> {{ t('endingsPage.ending3.unlock.item2Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending3.unlock.item3') }}</strong> {{ t('endingsPage.ending3.unlock.item3Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending3.unlock.item4') }}</strong> {{ t('endingsPage.ending3.unlock.item4Text') }}</li>
+                <li><strong>{{ t('endingsPage.ending3.unlock.item5') }}</strong> {{ t('endingsPage.ending3.unlock.item5Text') }}</li>
               </ul>
             </div>
 
@@ -115,7 +115,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useLocalizedPath } from '../composables/useLocalizedPath'
 
+const { t } = useI18n()
+const { getLocalizedPath } = useLocalizedPath()
 const activeSection = ref('intro')
 
 let observer = null
