@@ -118,5 +118,101 @@ export default [
             </p>
         </div>
     `
+    },
+    {
+        id: 2,
+        title: "Guide CCTV Hellmart : repérer les mimics avant d'ouvrir la porte",
+        description: "Vos yeux mentent ; le flux de surveillance, souvent non. Checklist CCTV pour Hellmart : bruit, sous-titres, éclairage et réputation—pour ne plus deviner sur le pas de la porte.",
+        tags: ["CCTV", "Identification", "Survie", "Mimics", "Stratégie"],
+        publishDate: "2026-03-20",
+        imageUrl: "/images/blog/blog01.webp",
+        imageAlt: "Moniteur de sécurité Hellmart montrant les flux des caméras au comptoir",
+        isHome: true,
+        seo: {
+            title: "Guide CCTV Hellmart : identification des mimics et sécurité à la porte (2026)",
+            description: "Guide CCTV Hellmart : utiliser le bruit de caméra, les sous-titres et la lumière pour distinguer humains et mimics. Éviter les mauvais REFUS, survivre à la panne du jour 3—liens vers le Wiki et le walkthrough.",
+            keywords: "Hellmart CCTV, guide mimic Hellmart, identification entités Hellmart, Tiny Bob Hellmart, Father Grayson Hellmart, Client creux, conseils survie Hellmart"
+        },
+        addressBar: "hellmart-cctv-mimic-checklist",
+        detailsHtml: `
+        <div class="blog-post-content">
+            <p class="intro">
+                Dans <strong>Hellmart</strong>, la sonnette est rarement « juste un client ». Laisser entrer la mauvaise personne peut finir une partie en une animation—mais spammer <strong>REFUSER</strong> sur de vrais clients fait s'effondrer votre <strong>réputation (KPI)</strong> et le gérant met fin au quart quand même.
+            </p>
+            <p>
+                Pour réduire à la fois les morts <em>et</em> les mauvais refus, le plus fiable est simple : <strong>traiter le CCTV comme preuve principale</strong>, utiliser les sous-titres comme test de langage, et ne vous fier au « feeling » que lorsque le magasin est bien éclairé.
+            </p>
+            <p>
+                Ce guide suit les mécaniques que la communauté documente déjà dans la <a href="/wiki">base d'identification des entités</a> et le <a href="/walkthrough">walkthrough jour par jour</a>—pas de fuites inventées, seulement une checklist utilisable sous pression.
+            </p>
+
+            <hr />
+
+            <h2>1) Bruit CCTV : votre signal « humain vs anomalie » le plus rapide</h2>
+            <p>
+                Le flux de sécurité n'est pas décoratif. Quand un visiteur apparaît à l'écran, observez les interférences : beaucoup d'anomalies montrent <strong>un fort bruit ou une image déformée</strong>, tandis que plusieurs humains au look bizarre (dont le fameux <strong>Tiny Bob</strong>) peuvent faire peur dans l'encadrement de porte mais paraître <strong>nets</strong> au CCTV.
+            </p>
+            <p>
+                Règle pratique : si l'image est stable et que la scène ressemble à une transaction normale, penchez-vous vers servir—puis enchaînez quand même les vérifications sous-titres ci-dessous.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habitude :</strong> la sonnerie → ouvrir la caméra d'abord → décider ensuite. En apprentissage, gardez le <a href="/wiki">Wiki</a> sur un second écran ou un téléphone.
+            </p>
+
+            <h2>2) Sous-titres : attraper les mimics qui parlent « presque » normalement</h2>
+            <p>
+                Certaines scènes sonnent polies jusqu'à ce qu'on lise attentivement. Erreur classique : une voix calme = « safe » en ignorant le texte—plusieurs mimics cassent le langage humain via <strong>fautes ou formulations bizarres dans les sous-titres</strong>.
+            </p>
+            <p>
+                Si les sous-titres clochent, ne vous rassurez pas. Une seule ligne compromise suffit pour <strong>REFUSER</strong>, même si la voix semble sincère.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habitude :</strong> ralentir pour tout dialogue « charité », « bénédiction » ou don. Relire chaque ligne. Pour les motifs, partir de la section anomalies du <a href="/wiki">Wiki</a> et comparer à vos captures.
+            </p>
+
+            <h2>3) L'éclairage : pourquoi l'identification s'effondre dans le noir</h2>
+            <p>
+                Lors des coupures scriptées (notamment vers le <strong>jour 3</strong>), c'est plus difficile car les indices visuels passent à la trappe. C'est là qu'on meurt en voulant être « efficace »—porte risquée dans le noir pour chasser les gains.
+            </p>
+            <p>
+                En panne, la boucle de survie doit prioriser <strong>lumière → chemin vers le tableau → rétablir la visibilité</strong> avant de parier sur des ventes marginales. Le <strong>Client creux</strong> punit précisément les erreurs de porte dans le noir.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habitude :</strong> sans courant, traiter chaque sonnerie comme un piège tant que vous ne voyez pas clair. Pour les achats (lampe, etc.), suivre les <a href="/walkthrough">notes économie du walkthrough</a>.
+            </p>
+
+            <h2>4) Réputation : REFUSER n'est pas une « sécurité gratuite »</h2>
+            <p>
+                Hellmart n'est pas que cache-cache horrifique—c'est aussi un sim de boulot. Renvoyer des clients légitimes fait chuter les indicateurs du gérant. Le but, ce sont des décisions <strong>à forte confiance</strong>, pas paniquer sur REFUSER.
+            </p>
+            <p>
+                CCTV + sous-titres transforment la panique en processus. Si vous ne pouvez citer aucun tell concret (bruit, faute, motif connu d'anomalie), vous devinez—et deviner gaspille des runs.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habitude :</strong> après une mort ou un licenciement, noter une ligne : « Quelle preuve j'ai ignorée ? » Si la réponse est « aucune », vous avez probablement mal lu le flux. Relire les <a href="/mechanics">mécaniques</a> sur KPI et menaces nocturnes.
+            </p>
+
+            <h2>5) Checklist 10 secondes avant OUVRIR</h2>
+            <ul>
+                <li><strong>Caméra d'abord :</strong> l'image est-elle stable ?</li>
+                <li><strong>Sous-titres ensuite :</strong> fautes, grammaire ou tournures étranges ?</li>
+                <li><strong>Lumière ensuite :</strong> voyez-vous vraiment les détails du modèle si besoin ?</li>
+                <li><strong>Motif enfin :</strong> ce visiteur colle-t-il à une routine sûre connue pour ce jour ?</li>
+            </ul>
+            <p>
+                Si une étape critique échoue, refusez le service, reprenez votre concentration, et ne rouvrez que lorsque le combat redevient équitable.
+            </p>
+
+            <hr />
+
+            <h3>Note finale</h3>
+            <p>
+                Un bon référencement pour ce type de guide vient de l'utilité : titres clairs, vocabulaire honnête sur les mécaniques, liens actionnables. Pour des fins qui demandent de l'exploration—pas seulement tenir le quart—associez cette checklist à notre <a href="/endings">hub des fins</a> une fois vos nuits stabilisées.
+            </p>
+            <p>
+                <em>Dernière mise à jour : mars 2026, alignée sur des schémas de jeu Hellmart vérifiés par la communauté.</em>
+            </p>
+        </div>
+    `
     }
 ]

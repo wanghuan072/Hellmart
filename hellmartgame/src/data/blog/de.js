@@ -119,6 +119,102 @@ export default [
         </div>
     `
     },
+    {
+        id: 2,
+        title: "Hellmart CCTV-Leitfaden: Mimics erkennen, bevor Sie die Tür öffnen",
+        description: "Ihre Augen täuschen; der Überwachungsfeed meist nicht. CCTV-first-Checkliste für Hellmart: Rauschen, Untertitel, Licht und Ruf—damit Sie an der Tür nicht mehr raten.",
+        tags: ["CCTV", "Entitäten-ID", "Überleben", "Mimics", "Strategie"],
+        publishDate: "2026-03-20",
+        imageUrl: "/images/blog/blog01.webp",
+        imageAlt: "Hellmart Überwachungsmonitor mit CCTV-Kamerabildern an der Kasse",
+        isHome: true,
+        seo: {
+            title: "Hellmart CCTV-Leitfaden: Mimic-Erkennung & Türsicherheit (2026)",
+            description: "Hellmart CCTV: Kamera-Rauschen, Untertitel und Licht nutzen, um Menschen von Mimics zu unterscheiden. Falsche ABLEHNEN vermeiden, den Stromausfall an Tag 3 überstehen—mit Verweisen auf Wiki und Walkthrough.",
+            keywords: "Hellmart CCTV, Hellmart Mimic Guide, Hellmart Entitäten, Tiny Bob Hellmart, Father Grayson Hellmart, Hollow Customer, Hellmart Überlebenstipps"
+        },
+        addressBar: "hellmart-cctv-mimic-checklist",
+        detailsHtml: `
+        <div class="blog-post-content">
+            <p class="intro">
+                In <strong>Hellmart</strong> ist die Türklingel selten „nur ein Kunde.“ Lassen Sie die falsche Person rein, kann ein Lauf in einer Animation enden—drücken Sie aber bei echten Käufern blind <strong>ABLEHNEN</strong>, bricht Ihr <strong>Ruf (KPI)</strong> ein und der Manager beendet die Schicht ebenfalls.
+            </p>
+            <p>
+                Am zuverlässigsten vermeiden Sie Tode <em>und</em> schlechte Ablehnungen so: <strong>CCTV als Hauptbeweis</strong>, Untertitel als Sprachtest, und Bauchgefühl nur bei ausreichend Licht.
+            </p>
+            <p>
+                Dieser Leitfaden orientiert sich an Mechaniken, die die Community bereits in der <a href="/wiki">Entitäts-Datenbank</a> und im <a href="/walkthrough">Walkthrough Tag für Tag</a> festhält—ohne erfundene Leaks, nur eine Checkliste für Stressmomente.
+            </p>
+
+            <hr />
+
+            <h2>1) CCTV-Rauschen: Ihr schnellstes Signal „Mensch vs. Anomalie“</h2>
+            <p>
+                Der Überwachungsfeed ist keine Deko. Achten Sie auf Störungen: Viele Anomalien zeigen <strong>starkes Rauschen oder ein verzerrtes Bild</strong>, während mehrere ungewöhnlich aussehende Menschen (darunter <strong>Tiny Bob</strong>) in der Tür gruselig wirken, auf CCTV aber <strong>klar</strong> wirken können.
+            </p>
+            <p>
+                Faustregel: Ist das Bild stabil und wirkt der Besucher wie ein normaler Einkauf, tendieren Sie zum Bedienen—und fahren Sie trotzdem die Untertitel-Checks unten fort.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Gewohnheit:</strong> Es klingelt → zuerst Kamera → dann erst ENTSCHEIDUNG. Beim Lernen der Tells die <a href="/wiki">Wiki</a> auf zweitem Monitor oder Handy offen lassen.
+            </p>
+
+            <h2>2) Untertitel: Mimics erwischen, die „fast“ normal sprechen</h2>
+            <p>
+                Manche Begegnungen klingen höflich, bis man genau liest. Ein klassischer Fehler: eine ruhige Stimme als „sicher“ werten und dabei Textfehler zu ignorieren—manche Mimics brechen die Sprachlogik in <strong>Rechtschreib- oder Wortfehlern in den Untertiteln</strong>.
+            </p>
+            <p>
+                Wirken die Untertitel falsch, nicht wegreden. Eine kompromittierte Zeile rechtfertigt <strong>ABLEHNEN</strong>, auch wenn die Stimme überzeugend klingt.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Gewohnheit:</strong> Bei „Wohltätigkeit“, „Segen“ oder Spenden-Dialogen langsamer werden. Jede Zeile prüfen. Für Muster die Anomalie-Abschnitte in unserer <a href="/wiki">Wiki</a> mit eigenen Screenshots abgleichen.
+            </p>
+
+            <h2>3) Licht: Warum Identifikation im Dunkeln zusammenbricht</h2>
+            <p>
+                Bei scripted Stromproblemen (bekannt um <strong>Tag 3</strong>) wird es schwerer, weil visuelle Hinweise leicht untergehen. Da sterben Spieler oft „effizient“—riskante Tür im Dunkeln für Umsatz.
+            </p>
+            <p>
+                In einer Blackout-Phase sollte Ihre Priorität <strong>Licht → Weg zum Sicherungskasten → Laden wieder klar sehen</strong> sein, bevor Sie auf marginales Geld wetten. Der <strong>Hollow Customer</strong> bestraft genau solche Dunkel-Tür-Fehler.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Gewohnheit:</strong> Ohne Strom jede Klingel als Falle behandeln, bis Sie wieder klar sehen. Einkauf (z. B. Notlicht) nach den <a href="/walkthrough">Wirtschaftshinweisen im Walkthrough</a> planen.
+            </p>
+
+            <h2>4) Ruf-Rechnung: ABLEHNEN ist kein „kostenloses Sicherheitsnetz“</h2>
+            <p>
+                Hellmart ist nicht nur Verstecken—es ist ein Job-Sim. Echte Kunden abweisen senkt die KPIs des Managers. Ziel sind also <strong>entscheidungssichere</strong> Klicks, nicht panisches ABLEHNEN.
+            </p>
+            <p>
+                CCTV und Untertitel machen aus Panik einen Ablauf. Können Sie kein konkretes Tell nennen (Rauschen, Textfehler, bekanntes Muster), raten Sie—und Raten kostet Läufe.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Gewohnheit:</strong> Nach Tod oder Kündigung eine Zeile notieren: „Welchen Beweis habe ich ignoriert?“ War die Antwort „keinen“, war vermutlich der Feed falsch gelesen. <a href="/mechanics">Mechaniken</a> zu KPI und Nachtgefahren nachlesen.
+            </p>
+
+            <h2>5) Eine 10-Sekunden-Checkliste vor ÖFFNEN</h2>
+            <ul>
+                <li><strong>Kamera zuerst:</strong> Ist das Bild stabil?</li>
+                <li><strong>Untertitel zweitens:</strong> Rechtschreibung, Grammatik oder unheimliche Formulierungen?</li>
+                <li><strong>Licht drittens:</strong> Können Sie Modelldetails wirklich sehen?</li>
+                <li><strong>Muster viertens:</strong> Passt der Besucher zu einem bekannten sicheren Ablauf an diesem Tag?</li>
+            </ul>
+            <p>
+                Fällt ein kritischer Schritt durch, Service verweigern, fokussieren—erst wieder öffnen, wenn die Bedingungen fair sind.
+            </p>
+
+            <hr />
+
+            <h3>Abschluss</h3>
+            <p>
+                Gute SEO entsteht hier durch Nutzen: klare Überschriften, ehrliche Mechanik-Sprache, klickbare nächste Schritte. Für Enden mit Erkundung—nicht nur Schichtüberleben—passt diese Checkliste mit unserem <a href="/endings">Enden-Hub</a>, sobald die Nächte stabil sind.
+            </p>
+            <p>
+                <em>Stand März 2026, abgestimmt auf community-verifizierte Hellmart-Spielmuster.</em>
+            </p>
+        </div>
+    `
+    },
 
 
     // {
