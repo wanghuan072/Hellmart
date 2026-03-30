@@ -125,7 +125,7 @@ export default [
         description: "Your eyes will lie; the security feed usually won't. Learn a practical CCTV-first checklist for Hellmart: static, subtitles, lighting, and reputation—so you stop guessing at the door.",
         tags: ["CCTV", "Entity ID", "Survival", "Checklist", "Mimics"],
         publishDate: "2026-03-20",
-        imageUrl: "/images/blog/blog01.webp",
+        imageUrl: "/images/blog/blog02.webp",
         imageAlt: "Hellmart store security monitor showing CCTV camera feeds at the counter",
         isHome: true,
         seo: {
@@ -211,6 +211,97 @@ export default [
             </p>
             <p>
                 <em>Last updated to reflect community-verified Hellmart gameplay patterns as of March 2026.</em>
+            </p>
+        </div>
+    `
+    },
+    {
+        id: 3,
+        title: "Hellmart Cashier Guide: Speed Bonus, Silent Alarm, and KPI Discipline",
+        description: "Horror gets the headlines, but Hellmart is also a job sim. Learn how scanning combos, the under-counter alarm, scam checks, and floor upkeep protect your reputation—and when to stop bagging chips and read the register log.",
+        tags: ["Cashier", "KPI", "Mechanics", "Shoplifter", "Scammers"],
+        publishDate: "2026-03-28",
+        imageUrl: "/images/blog/blog03.webp",
+        imageAlt: "Hellmart checkout counter with scanner, bags, and register during a night shift",
+        isHome: true,
+        seo: {
+            title: "Hellmart Cashier Guide: Scanning, Silent Alarm & KPI (Mechanics Explained)",
+            description: "Hellmart register guide: Speed Bonus scanning, High-Capacity Scanner, Silent Alarm vs Shoplifter, Day 4+ scam checks, cleaning & power—aligned with our official mechanics page for SEO-friendly walkthrough support.",
+            keywords: "Hellmart cashier guide, Hellmart scanning Speed Bonus, Hellmart Silent Alarm, Hellmart Shoplifter, Hellmart scammers Day 4, Hellmart KPI, Hellmart fake money, Hellmart store maintenance"
+        },
+        addressBar: "hellmart-cashier-kpi-mechanics-guide",
+        detailsHtml: `
+        <div class="blog-post-content">
+            <p class="intro">
+                I kept dying to the scary stuff, then realized half my failed runs weren’t even “horror deaths.” I was getting punished by the <strong>cashier side</strong> of <strong>Hellmart</strong>: slow scanning, bad alarm timing, and reputation loss from avoidable mistakes.
+            </p>
+            <p>
+                Here’s the short, practical routine I use now—scanning speed, the under-counter alarm, scam checks, and quick upkeep. If you want the full breakdown of tools (UV/CCTV/blinds) or day routing, jump to <a href="/mechanics">Mechanics</a> and the <a href="/walkthrough">Walkthrough</a>.
+            </p>
+
+            <hr />
+
+            <h2>1) Scanning & bagging: build speed without throwing away accuracy</h2>
+            <p>
+                The core loop is intentional: pick up an item, aim at the barcode, scan, bag it. Where players leak KPI is usually rhythm, not ignorance of the steps.
+            </p>
+            <p>
+                The mechanics guide highlights a practical optimization: instead of scanning piecemeal, <strong>gather everything on the counter into a pile first</strong>, then scan and bag in a burst. Done cleanly, this triggers a <strong>Speed Bonus</strong> that helps you keep up with angry queues.
+            </p>
+            <p>
+                Long-term, the default scanner is deliberately sluggish. When you can afford it, buying the <strong>High-Capacity Scanner ($200)</strong> roughly doubles throughput—valuable if you are also juggling cleaning, CCTV, and night events.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habit:</strong> Batch work like a real closing shift: clear the counter, then execute one fast sequence. If you constantly micro-pause for fear, you lose both time and tips.
+            </p>
+
+            <h2>2) Silent alarm: high reward, catastrophic mis-clicks</h2>
+            <p>
+                Under the register sits a <strong>small red button</strong>—the silent alarm. It is purpose-built for one threat: <strong>the Shoplifter</strong>, the customer who pockets merchandise.
+            </p>
+            <p>
+                The correct timing is strict: press when they pocket, not when you merely feel suspicious. The mechanics page warns that a <strong>false alarm on a normal shopper tears down reputation</strong>—the same KPI you hemorrhage when you wrongly deny harmless regulars at the door.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habit:</strong> If you are not 100% sure you saw the pocket animation, do not gamble the button. Re-watch hand motion on replay mentality: one calm breath beats one panicked slap.
+            </p>
+
+            <h2>3) Scammers after Day 4: trust the math, not the performance</h2>
+            <p>
+                From <strong>Day 4 onward</strong>, scam patterns join the chaos. Two repeat offenders appear in documentation:
+            </p>
+            <ul>
+                <li><strong>Fake money:</strong> inspect bills. Counterfeits show blurry watermarks or absurd denominations such as <strong>$0</strong>.</li>
+                <li><strong>Wrong change disputes:</strong> some actors insist you shorted them. Do not accept the guilt trip blindly—open the register log, verify arithmetic, then use <strong>Reject Complaint</strong> when the numbers already line up.</li>
+            </ul>
+            <p>
+                These moments look boring compared to mimics, but they are pure reputation traps dressed as paperwork.
+            </p>
+
+            <h2>4) Store maintenance: filth quietly fails your KPI</h2>
+            <p>
+                Hellmart wants a functioning superstore fantasy. Snow and mud leave <strong>footprints</strong>—mop them. Loose trash belongs in the outdoor bin. Letting grime pile up does not spawn a jump scare on the spot; it just nudges <strong>tips downward</strong> and contributes to <strong>missed KPI</strong> during evaluation.
+            </p>
+            <p>
+                Power is the other silent killer: the <strong>fuse box lives in the Storage Room (backroom)</strong>. Too many devices, harsh blizzard load, or scripted outages can trip the breaker. Flip the lever when safe—and <strong>bring a flashlight</strong> when navigating that route, especially if you already lived through a blackout evening.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habit:</strong> Treat cleaning like a second health bar. Two quick mop passes between door checks beats a spotless floor at minute fifty-nine.
+            </p>
+
+            <h2>5) How this ties to "horror skill"</h2>
+            <p>
+                Mechanics discipline buys mental bandwidth. When scanning, alarms, scams, and mopping are on autopilot, you can spend real focus on <strong>CCTV static, subtitles, and survival tools</strong> covered in our companion guides.
+            </p>
+            <p>
+                Jump to <a href="/mechanics">Part 3: Survival Tools</a> for UV seam checks, CCTV blind spots, and blinds tactics—then cross-reference anomaly identities on the <a href="/wiki">wiki</a>.
+            </p>
+
+            <hr />
+
+            <h3>Bottom line</h3>
+            <p>
+                If you’re struggling to keep KPI stable, don’t “play braver”—play cleaner. Batch scan for the Speed Bonus, don’t slap the alarm unless you saw the pocket, verify change disputes in the log, and mop before the floor becomes a tax.
             </p>
         </div>
     `

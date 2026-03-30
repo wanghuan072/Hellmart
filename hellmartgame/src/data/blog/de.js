@@ -125,7 +125,7 @@ export default [
         description: "Ihre Augen täuschen; der Überwachungsfeed meist nicht. CCTV-first-Checkliste für Hellmart: Rauschen, Untertitel, Licht und Ruf—damit Sie an der Tür nicht mehr raten.",
         tags: ["CCTV", "Entitäten-ID", "Überleben", "Mimics", "Strategie"],
         publishDate: "2026-03-20",
-        imageUrl: "/images/blog/blog01.webp",
+        imageUrl: "/images/blog/blog02.webp",
         imageAlt: "Hellmart Überwachungsmonitor mit CCTV-Kamerabildern an der Kasse",
         isHome: true,
         seo: {
@@ -211,6 +211,97 @@ export default [
             </p>
             <p>
                 <em>Stand März 2026, abgestimmt auf community-verifizierte Hellmart-Spielmuster.</em>
+            </p>
+        </div>
+    `
+    },
+    {
+        id: 3,
+        title: "Hellmart Kassen-Leitfaden: Speed-Bonus, Stiller Alarm und KPI-Disziplin",
+        description: "Horror dominiert die Clips, Hellmart ist aber auch Job-Sim. Scannen in Serien, der Alarm unter der Theke, Scam-Checks und Sauberkeit schützen Ihren Ruf—und wann Sie die Chips liegen lassen und das Kassenlog lesen.",
+        tags: ["Kasse", "KPI", "Mechaniken", "Ladendieb", "Scammer"],
+        publishDate: "2026-03-28",
+        imageUrl: "/images/blog/blog03.webp",
+        imageAlt: "Hellmart-Kasse mit Scanner, Tüten und Registrierkasse während der Nachtschicht",
+        isHome: true,
+        seo: {
+            title: "Hellmart Kassen-Leitfaden: Scannen, stiller Alarm & KPI (Mechaniken)",
+            description: "Hellmart Register-Guide: Speed-Bonus beim Scannen, Hochleistungs-Scanner, stiller Alarm vs. Ladendieb, Scams ab Tag 4, Reinigung & Strom—wie auf der offiziellen Mechaniken-Seite, SEO-freundlich zum Walkthrough.",
+            keywords: "Hellmart Kasse, Hellmart Speed Bonus Scannen, Hellmart stiller Alarm, Hellmart Ladendieb, Hellmart Scammer Tag 4, Hellmart KPI, Hellmart Falschgeld, Hellmart Ladenpflege"
+        },
+        addressBar: "hellmart-cashier-kpi-mechanics-guide",
+        detailsHtml: `
+        <div class="blog-post-content">
+            <p class="intro">
+                Ich bin am Anfang ständig an den gruseligen Dingen gestorben—und dann gemerkt: Viele Runs sind nicht an „Horror“ gescheitert, sondern an der <strong>Kassen-Routine</strong> in <strong>Hellmart</strong>. Zu langsam gescannt, Alarm falsch gedrückt, Ruf ohne Not verbrannt.
+            </p>
+            <p>
+                Hier ist die kurze, praktische Routine, die mir hilft: Scan-Tempo, Knopf unter der Theke, Scam-Checks und schnelle Pflege. Für den kompletten Werkzeug-Teil (UV/CCTV/Jalousien) oder Tages-Routen: <a href="/mechanics">Mechaniken</a> und <a href="/walkthrough">Walkthrough</a>.
+            </p>
+
+            <hr />
+
+            <h2>1) Scannen & Einpacken: Tempo ohne schludrige Fehler</h2>
+            <p>
+                Die Kernschleife ist klar: Artikel nehmen, Strichcode anvisieren, scannen, einpacken. KPI verlieren Spieler meist am Rhythmus, nicht am Unverständnis der Schritte.
+            </p>
+            <p>
+                Die Mechaniken beschreiben einen praktischen Trick: statt Stück für Stück <strong>alles auf der Theke sammeln</strong>, dann in einem Ruck scannen und packen. Sauber ausgeführt löst das einen <strong>Speed-Bonus</strong> aus und hält Warteschlangen im Griff.
+            </p>
+            <p>
+                Langfristig ist der Standard-Scanner absichtlich träge. Wenn es die Kasse hergibt, lohnt der <strong>Hochleistungs-Scanner (200 $)</strong>—er verdoppelt grob den Durchsatz, wertvoll neben Reinigung, CCTV und Nachtevents.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Gewohnheit:</strong> Arbeit bündeln wie beim Schichtende: Theke leeren, dann eine schnelle Sequenz. Dauer-Pausen aus Angst kosten Zeit und Trinkgeld.
+            </p>
+
+            <h2>2) Stiller Alarm: hoher Gewinn, katastrophale Fehlklicks</h2>
+            <p>
+                Unter der Kasse sitzt ein <strong>kleiner roter Knopf</strong>—der stille Alarm. Er ist für eine Bedrohung gedacht: den <strong>Ladendieb</strong>, der Ware einsteckt.
+            </p>
+            <p>
+                Das Timing ist strikt: drücken, wenn eingesteckt wird—nicht bei bloßem Bauchgefühl. Die Mechaniken warnen: <strong>Alarm gegen normale Kundschaft zerstört den Ruf</strong>—dieselbe KPI, die Sie auch mit falschen ABLEHNEN an der Tür versenken.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Gewohnheit:</strong> Ohne klare Taschen-Animation nicht auf den Knopf wetten. Handbewegung wie bei einer Aufnahme zweimal prüfen—ein ruhiger Atemzug schlägt Panik.
+            </p>
+
+            <h2>3) Scammer ab Tag 4: der Mathematik vertrauen, nicht der Show</h2>
+            <p>
+                Ab <strong>Tag 4</strong> kommen Betrüger-Muster dazu. Zwei wiederkehrende Fälle:
+            </p>
+            <ul>
+                <li><strong>Falschgeld:</strong> Scheine prüfen. Fälschungen haben verwaschene Wasserzeichen oder absurde Nennwerte wie <strong>0 $</strong>.</li>
+                <li><strong>Falscher Wechsel:</strong> manche behaupten, Sie hätten zu wenig herausgegeben. Nicht blind schuldig fühlen—<strong>Kassenlog</strong> öffnen, rechnen, bei korrekter Summe <strong>Beschwerde ablehnen</strong>.</li>
+            </ul>
+            <p>
+                Wirkt langweilig neben Mimics, sind aber reine Ruf-Fallen im Bürokratie-Kostüm.
+            </p>
+
+            <h2>4) Ladenpflege: Dreck scheitert leise an der KPI</h2>
+            <p>
+                Hellmart will einen funktionierenden Supermarkt. Schnee und Matsch hinterlassen <strong>Fußspuren</strong>—mit dem <strong>Wischmopp</strong> weg. Müll gehört in die Tonne draußen. Dreck stapelt selten sofort einen Jump-Scare, drückt aber <strong>Trinkgeld</strong> und trägt zu <strong>verpasster KPI</strong> bei der Bewertung bei.
+            </p>
+            <p>
+                Strom ist der andere leise Killer: Der <strong>Sicherungskasten steht im Lagerraum (Backroom)</strong>. Zu viele Geräte, Blizzard-Last oder scripted Ausfälle können auslösen. Hebel hoch, wenn sicher—und <strong>Taschenlampe mitnehmen</strong>, besonders nach einem Abend mit Stromproblem.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Gewohnheit:</strong> Reinigung wie eine zweite Leiste. Zwischen Tür-Checks zwei schnelle Mopp-Züge schlagen den makellosen Boden um Sekunde 59.
+            </p>
+
+            <h2>5) Was das mit „Horror-Skill“ zu tun hat</h2>
+            <p>
+                Mechanik-Disziplin kauft Kopffreiheit. Wenn Scanner, Alarm, Scams und Wischen halb automatisch laufen, bleibt Fokus für <strong>CCTV-Rauschen, Untertitel und Survival-Tools</strong> aus den Begleit-Leitfäden.
+            </p>
+            <p>
+                Springen Sie zu <a href="/mechanics">Teil 3: Survival-Tools</a> für UV-Nähte, CCTV-Totwinkel und Jalousien—dann Anomalien im <a href="/wiki">Wiki</a> abgleichen.
+            </p>
+
+            <hr />
+
+            <h3>Fazit</h3>
+            <p>
+                Wenn Ihre KPI ständig kippt, spielen Sie nicht „mutiger“, sondern sauberer: Speed-Bonus durch Batch-Scan, Alarm nur bei klarer Taschen-Animation, Wechselgeld-Streit über das Log prüfen, und kurz wischen, bevor der Boden zur Dauerstrafe wird.
             </p>
         </div>
     `

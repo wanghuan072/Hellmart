@@ -125,7 +125,7 @@ export default [
         description: "Vos yeux mentent ; le flux de surveillance, souvent non. Checklist CCTV pour Hellmart : bruit, sous-titres, éclairage et réputation—pour ne plus deviner sur le pas de la porte.",
         tags: ["CCTV", "Identification", "Survie", "Mimics", "Stratégie"],
         publishDate: "2026-03-20",
-        imageUrl: "/images/blog/blog01.webp",
+        imageUrl: "/images/blog/blog02.webp",
         imageAlt: "Moniteur de sécurité Hellmart montrant les flux des caméras au comptoir",
         isHome: true,
         seo: {
@@ -211,6 +211,97 @@ export default [
             </p>
             <p>
                 <em>Dernière mise à jour : mars 2026, alignée sur des schémas de jeu Hellmart vérifiés par la communauté.</em>
+            </p>
+        </div>
+    `
+    },
+    {
+        id: 3,
+        title: "Hellmart à la caisse : bonus de vitesse, alarme silencieuse et discipline KPI",
+        description: "L'horreur monopolise les clips, mais Hellmart est aussi un sim de boulot. Enchaînement au scanner, bouton sous le comptoir, arnaques et propreté protègent votre réputation—et quand lâcher les chips pour lire le journal de caisse.",
+        tags: ["Caisse", "KPI", "Mécaniques", "Voleur", "Arnaques"],
+        publishDate: "2026-03-28",
+        imageUrl: "/images/blog/blog03.webp",
+        imageAlt: "Caisse Hellmart avec scanner, sacs et registre pendant un quart de nuit",
+        isHome: true,
+        seo: {
+            title: "Hellmart guide caisse : scan, alarme silencieuse & KPI (mécaniques)",
+            description: "Guide caisse Hellmart : bonus de vitesse au scan, scanner haute capacité, alarme silencieuse vs voleur, arnaques à partir du jour 4, ménage et courant—comme sur la page mécaniques, utile SEO avec le walkthrough.",
+            keywords: "Hellmart caisse, Hellmart bonus vitesse scan, Hellmart alarme silencieuse, Hellmart voleur, Hellmart arnaques jour 4, Hellmart KPI, Hellmart faux billet, Hellmart entretien magasin"
+        },
+        addressBar: "hellmart-cashier-kpi-mechanics-guide",
+        detailsHtml: `
+        <div class="blog-post-content">
+            <p class="intro">
+                Au début je mourais surtout à cause du « scary »… puis j’ai compris que beaucoup de runs ratés n’étaient même pas des morts horrifiques. C’était la <strong>routine de caisse</strong> dans <strong>Hellmart</strong> : scan trop lent, mauvais timing sur l’alarme, réputation perdue pour rien.
+            </p>
+            <p>
+                Voici la routine courte et pratico-pratique que j’utilise maintenant : vitesse de scan, bouton sous le comptoir, checks anti-arnaques et entretien rapide. Pour le détail des outils (UV/CCTV/stores) et les routes par jour, voir <a href="/mechanics">Mécaniques</a> et le <a href="/walkthrough">Walkthrough</a>.
+            </p>
+
+            <hr />
+
+            <h2>1) Scan et mise en sac : accélérer sans bâcler</h2>
+            <p>
+                La boucle est claire : saisir l'article, viser le code-barres, scanner, mettre au sac. On perd le KPI surtout sur le rythme, pas sur l'ignorance des étapes.
+            </p>
+            <p>
+                Le guide mécaniques décrit une astuce : plutôt qu'un scan isolé, <strong>rassembler tout sur le comptoir</strong>, puis enchaîner scan et sac en rafale. Bien exécuté, cela déclenche un <strong>bonus de vitesse</strong> qui calme les files.
+            </p>
+            <p>
+                Sur la durée, le scanner par défaut est volontairement lent. Dès que le budget le permet, l'<strong>scanner haute capacité (200 $)</strong> double grossièrement le débit—utile si vous jonglez aussi avec le ménage, le CCTV et la nuit.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habitude :</strong> traiter les lots comme en fin de service : vider le comptoir, puis une séquence rapide. Micro-pauses permanentes par peur coûtent temps et pourboires.
+            </p>
+
+            <h2>2) Alarme silencieuse : gros gain, erreur catastrophique</h2>
+            <p>
+                Sous la caisse se trouve un <strong>petit bouton rouge</strong>—l'alarme silencieuse. Elle sert un cas précis : <strong>le voleur à l'étalage</strong> qui met la marchandise en poche.
+            </p>
+            <p>
+                Le timing est strict : appuyer au moment où la poche se remplit, pas sur un simple malaise. La doc prévient : une <strong>fausse alerte sur un client normal démolit la réputation</strong>—la même jauge que vous videz aussi avec de mauvais REFUSER à la porte.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habitude :</strong> sans animation de poche nette, ne pariez pas sur le bouton. Rejouez le geste des mains mentalement—une respiration calme bat la panique.
+            </p>
+
+            <h2>3) Arnaques après le jour 4 : faites confiance aux chiffres</h2>
+            <p>
+                À partir du <strong>jour 4</strong>, des escroqueries s'ajoutent. Deux motifs reviennent :
+            </p>
+            <ul>
+                <li><strong>Faux billets :</strong> inspectez. Les contrefaçons ont des filigranes flous ou des valeurs absurdes comme <strong>0 $</strong>.</li>
+                <li><strong>Litige sur la monnaie :</strong> certains prétendent que vous avez mal rendu. Pas de culpabilité aveugle—ouvrez le <strong>journal de caisse</strong>, vérifiez l'arithmétique, puis <strong>Rejeter la plainte</strong> si les lignes sont déjà justes.</li>
+            </ul>
+            <p>
+                Moins spectaculaire que les mimics, ce sont des pièges réputation déguisés en paperasse.
+            </p>
+
+            <h2>4) Entretien : la saleté fait silencieusement chuter le KPI</h2>
+            <p>
+                Hellmart veut un supermarché crédible. Neige et boue laissent des <strong>empreintes</strong>—passez la <strong>serpillière</strong>. Les débris vont à la poubelle extérieure. Laisser salir ne crée pas toujours un jump scare instantané, mais <strong>réduit les pourboires</strong> et pousse vers un <strong>KPI manqué</strong> à l'évaluation.
+            </p>
+            <p>
+                Le courant est l'autre tueur discret : le <strong>tableau électrique est au local de stockage (arrière-boutique)</strong>. Trop d'appareils, charge de blizzard ou événements scriptés peuvent faire sauter le disjoncteur. Remettez le levier quand c'est sûr—et <strong>emportez une lampe</strong>, surtout après une soirée sans lumières.
+            </p>
+            <p class="pro-tip">
+                <strong>✅ Habitude :</strong> voir le ménage comme une seconde jauge. Deux passages de serpillière entre deux checks de porte battent un sol nickel à la cinquante-neuvième minute.
+            </p>
+
+            <h2>5) Lien avec le « skill horrifique »</h2>
+            <p>
+                Une mécanique de caisse au muscle libère l'attention. Quand scanner, alarme, arnaques et serpillière tournent en semi-auto, il reste de la marge pour <strong>le bruit CCTV, les sous-titres et les outils de survie</strong> décrits dans nos autres guides.
+            </p>
+            <p>
+                Allez au <a href="/mechanics">Partie 3 : outils de survie</a> pour les coutures UV, angles morts CCTV et stores—puis recoupez les anomalies sur le <a href="/wiki">wiki</a>.
+            </p>
+
+            <hr />
+
+            <h3>En bref</h3>
+            <p>
+                Si votre KPI s’écroule souvent, ne « jouez pas plus courageux »—jouez plus propre : batch-scan pour le bonus de vitesse, alarme uniquement si vous avez vu la mise en poche, litiges de monnaie via le journal, et un coup de serpillière avant que le sol ne devienne une taxe permanente.
             </p>
         </div>
     `
