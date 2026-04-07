@@ -306,6 +306,83 @@ export default [
         </div>
     `
     },
+    {
+        id: 4,
+        title: "Hellmart on Steam: What the Demo Stops At (and What the Full Game Actually Adds)",
+        description: "Finished the free Hellmart demo and unsure what changes after Day 3? Here are concrete Steam-store facts—7-day run, achievements, cloud saves, soundtrack tracks, bundles—and where our walkthrough picks up.",
+        tags: ["Steam", "Demo", "PC", "Achievements", "Buying Guide"],
+        publishDate: "2026-04-07",
+        imageUrl: "/images/blog/blog04.webp",
+        imageAlt: "Supermarket shelves and aisle lighting—stock photo used as blog cover for Hellmart Steam guide",
+        isHome: true,
+        seo: {
+            title: "Hellmart Steam Demo vs Full Game: 7 Days, Achievements & Soundtrack (2026)",
+            description: "Hellmart Steam guide: demo covers first three shifts; full release adds a 7-day structure, 21 Steam Achievements, Cloud saves, optional soundtrack DLC, and post-launch patches. Links to walkthrough for Day 4+.",
+            keywords: "Hellmart Steam, Hellmart demo vs full game, Hellmart free demo, Hellmart achievements, Hellmart soundtrack, Hellmart PC, Hellmart 7 days, Hellmart Steam Cloud, Hellmart bundle"
+        },
+        addressBar: "hellmart-steam-demo-full-game-checklist",
+        detailsHtml: `
+        <div class="blog-post-content">
+            <p class="intro">
+                I burned through the <strong>free Hellmart demo</strong> on Steam, got comfy with scanning and the first big scare beats, then hesitated at checkout for the full game. The store pages actually spell out a few <strong>hard differences</strong> that wiki-style guides rarely collect in one place—so here is the checklist I wish I had first.
+            </p>
+
+            <h2>1) Demo scope: three full shifts, not “a slice of Day 7”</h2>
+            <p>
+                Valve’s demo listing describes <strong>your first three full shifts</strong> in the Northern convenience store setup. That lines up with how most players talk about the learning curve: by the end of that block you understand day work, night pressure, and basic defense habits—but you have not committed to the full arc.
+            </p>
+            <p>
+                If our <a href="/walkthrough">walkthrough</a> reads like it jumps from “survive the outage” to “long-term economy,” that is the handoff point: treat anything past the demo window as <strong>full-game pacing</strong>.
+            </p>
+
+            <h2>2) Full purchase: the 7-day framing is the product promise</h2>
+            <p>
+                The standard <strong>HELLMART</strong> Steam page advertises trying to <strong>survive seven days</strong> in the Far North loop. That is not marketing fluff only—it is the spine that makes endings, note hunts, and late-shift threats matter. Our <a href="/endings">endings guide</a> assumes you are playing that longer schedule, not stopping where the demo credits roll.
+            </p>
+
+            <h2>3) Steam-native extras you can literally see in the sidebar</h2>
+            <ul>
+                <li><strong>21 Achievements</strong> listed on the store—handy if you want a completion checklist beyond “don’t die.”</li>
+                <li><strong>Steam Cloud</strong> support, so reinstalling Windows or hopping between PCs does not automatically nuke a careful run.</li>
+                <li><strong>Family Sharing</strong> flag (if your household shares libraries, worth confirming who “owns” the night shift save).</li>
+            </ul>
+            <p>
+                None of that changes how you identify mimics, but it <em>does</em> change how you plan a multi-day run in real life.
+            </p>
+
+            <h2>4) Optional soundtrack DLC: track names double as a character roster teaser</h2>
+            <p>
+                There is a separate <strong>HELLMART Soundtrack</strong> SKU on Steam (cheap add-on, does not include the base game). The public track list reads like a who’s-who: shift themes plus dedicated cues such as <strong>Tiny Bob</strong>, <strong>The Priest</strong>, <strong>Karen</strong>, <strong>The Boozer</strong>, <strong>The Anarchist</strong>, and more.
+            </p>
+            <p>
+                If you are still mixing up visitors, skim that list once—it lines up surprisingly well with the faces you are already arguing with at the door, and pairs nicely with our <a href="/wiki">entity database</a>.
+            </p>
+
+            <h2>5) Bundles and sales math (no drama, just facts)</h2>
+            <p>
+                Steam periodically stacks <strong>HELLMART</strong> into publisher bundles with other job-sim or horror-adjacent titles. If you already planned to grab one of the partner games, the bundle page is worth a 10-second price compare before you click “buy” twice.
+            </p>
+
+            <h2>6) Mature-content flags—read before you stream</h2>
+            <p>
+                The official store entry includes a <strong>mature content description</strong> (tobacco/alcohol commerce, plus other adult scenes). If you clip for TikTok or YouTube, skim that blurb first so your vod does not get nuked for platform rules—not because the game “hides” anything, but because storefront text is the cleanest source of truth.
+            </p>
+
+            <h2>7) After launch patches: check Steam News, not random forums</h2>
+            <p>
+                The developer has already posted <strong>Patch Notes #1</strong> and team updates on the game’s Steam news hub. If something feels off after an update—prices, timing, a weird soft-lock—start there before you assume you forgot a rule from Day 2.
+            </p>
+
+            <h2>Where to go next on this site</h2>
+            <p>
+                Demo veterans jumping into the paid build should chain <a href="/walkthrough">Day 4 onward in the walkthrough</a>, keep <a href="/mechanics">mechanics</a> open for scanner and alarm details, and only chase endings once nights feel stable in <a href="/endings">the endings hub</a>.
+            </p>
+            <p>
+                If a Steam bullet changes (achievement count, Cloud label, DLC list), the store page wins—guides like this are just a snapshot to save you tab-hopping.
+            </p>
+        </div>
+    `
+    },
 
 
     // {

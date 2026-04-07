@@ -305,5 +305,76 @@ export default [
             </p>
         </div>
     `
+    },
+    {
+        id: 4,
+        title: "Hellmart sur Steam : où s’arrête la démo et ce que la version complète ajoute vraiment",
+        description: "Démo terminée et doute après le jour 3 ? Faits Steam concrets : run sur 7 jours, 21 succès, cloud, titres de la BO, bundles—et notre walkthrough pour la suite.",
+        tags: ["Steam", "Démo", "PC", "Succès", "Achat"],
+        publishDate: "2026-04-07",
+        imageUrl: "/images/blog/blog04.webp",
+        imageAlt: "Rayons de supermarché et éclairage d’allée—photo stock pour la couverture du guide Steam Hellmart",
+        isHome: true,
+        seo: {
+            title: "Hellmart Steam : démo vs jeu complet, succès et bande-son (2026)",
+            description: "Hellmart sur Steam : la démo couvre trois quarts complets ; la version payante ajoute une structure sur 7 jours, 21 succès, Steam Cloud, BO optionnelle et patches. Lien vers walkthrough jour 4+.",
+            keywords: "Hellmart Steam, Hellmart démo vs complet, Hellmart démo gratuite, Hellmart succès Steam, Hellmart soundtrack, Hellmart PC, Hellmart 7 jours, Hellmart Steam Cloud, Hellmart bundle"
+        },
+        addressBar: "hellmart-steam-demo-full-game-checklist",
+        detailsHtml: `
+        <div class="blog-post-content">
+            <p class="intro">
+                J’ai bouclé la <strong>démo gratuite Hellmart</strong> sur Steam, pris le rythme du scan et des premières frayeurs—puis j’ai hésité avant l’achat. La fiche magasin liste des <strong>différences nettes</strong> qu’on ne voit pas souvent regroupées dans un guide. Voici la check-list que j’aurais voulue avant.
+            </p>
+
+            <h2>1) Périmètre de la démo : trois quarts complets</h2>
+            <p>
+                La page démo indique <strong>vos trois premiers quarts complets</strong> dans le magasin du Grand Nord. C’est le bout de courbe « apprentissage » : jour, nuit, bases de défense—sans l’arc entier.
+            </p>
+            <p>
+                Notre <a href="/walkthrough">walkthrough</a> devient plus exigeant sur l’économie et le late game après cette zone : considérez la suite comme du <strong>rythme jeu complet</strong>.
+            </p>
+
+            <h2>2) Version complète : la promesse des 7 jours</h2>
+            <p>
+                La page <strong>HELLMART</strong> standard parle de tenter de <strong>survivre sept jours</strong>. C’est le squelette qui donne du sens aux fins, aux indices et aux menaces tardives—notre <a href="/endings">guide des fins</a> part de ce calendrier, pas de la fin de démo.
+            </p>
+
+            <h2>3) Extras Steam visibles dans la colonne</h2>
+            <ul>
+                <li><strong>21 succès</strong> listés—utile pour une checklist de complétion.</li>
+                <li><strong>Steam Cloud</strong> pour ne pas perdre un run au premier formatage.</li>
+                <li>Indication <strong>Family Sharing</strong> si la bibliothèque est partagée.</li>
+            </ul>
+
+            <h2>4) BO optionnelle : les titres comme teaser de personnages</h2>
+            <p>
+                Il existe une <strong>HELLMART Soundtrack</strong> séparée (petit prix, sans jeu de base). Les pistes publiques citent entre autres <strong>Tiny Bob</strong>, <strong>The Priest</strong>, <strong>Karen</strong>, <strong>The Boozer</strong>, <strong>The Anarchist</strong>—ça recoupe bien les visages au carré et complète notre <a href="/wiki">base d’entités</a>.
+            </p>
+
+            <h2>5) Bundles : 10 secondes de comparatif prix</h2>
+            <p>
+                Steam propose parfois des bundles avec d’autres sims ou titres proches. Si vous aviez déjà un jeu partenaire en tête, vérifiez le pack avant d’acheter deux fois.
+            </p>
+
+            <h2>6) Avertissement contenu mature avant de streamer</h2>
+            <p>
+                La fiche officielle inclut une description <strong>contenu mature</strong> (commerce tabac/alcool + autres scènes adultes). Pour clips TikTok/YouTube, lisez ce bloc en premier—c’est la source la plus propre pour les règles plateforme.
+            </p>
+
+            <h2>7) Patches : l’onglet actualités Steam avant les forums</h2>
+            <p>
+                L’équipe a publié des <strong>Patch Notes #1</strong> et des notes sur le hub d’actu. Si un patch change un ressenti (prix, timing, bug), commencez là avant de douter de vos réflexes du jour 2.
+            </p>
+
+            <h2>Et après sur ce site ?</h2>
+            <p>
+                Post-démo : enchaînez le <a href="/walkthrough">walkthrough à partir du jour 4</a>, gardez les <a href="/mechanics">mécaniques</a> pour caisse et alarme, et attaquez les <a href="/endings">fins</a> quand les nuits sont stables.
+            </p>
+            <p>
+                Si Steam modifie chiffres ou labels, la fiche du store fait foi—cet article évite juste d’ouvrir dix onglets.
+            </p>
+        </div>
+    `
     }
 ]
