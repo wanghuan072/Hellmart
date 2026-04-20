@@ -2,6 +2,7 @@ import { createI18n } from 'vue-i18n'
 import en from './locales/en.js'
 import de from './locales/de.js'
 import fr from './locales/fr.js'
+import pt from './locales/pt.js'
 
 const i18n = createI18n({
   legacy: false,
@@ -10,7 +11,8 @@ const i18n = createI18n({
   messages: {
     en,
     de,
-    fr
+    fr,
+    pt
   }
 })
 

@@ -1,9 +1,7 @@
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRoute } from 'vue-router'
 
 // 支持的语言列表
-const supportedLocales = ['en', 'de', 'fr']
+const supportedLocales = ['en', 'de', 'fr', 'pt']
 
 /**
  * 从路径中提取语言
@@ -23,7 +21,6 @@ export function extractLocaleFromPath(path) {
  */
 export function useLocalizedPath() {
   const { locale } = useI18n()
-  const route = useRoute()
 
   /**
    * 生成本地化路径

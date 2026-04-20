@@ -1,5 +1,3 @@
-import { useI18n } from 'vue-i18n'
-
 // 默认导出英文数据（用于 SSR 或初始加载）
 import enData from './blog/en.js'
 

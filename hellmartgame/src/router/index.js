@@ -5,7 +5,7 @@ import WikiView from '../views/WikiView.vue'
 import WalkthroughView from '../views/WalkthroughView.vue'
 
 // 支持的语言列表（英文是默认，不需要前缀）
-const supportedLocales = ['en', 'de', 'fr']
+const supportedLocales = ['en', 'de', 'fr', 'pt']
 
 // 生成路由路径（英文无前缀，其他语言有前缀）
 const createRoutePath = (path, locale = 'en') => {

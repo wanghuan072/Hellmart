@@ -69,6 +69,13 @@
           >
             <span class="lang-code">FR</span>
           </button>
+          <button
+            class="lang-option"
+            :class="{ active: currentLocale === 'pt' }"
+            @click="selectLanguage('pt')"
+          >
+            <span class="lang-code">PT</span>
+          </button>
         </div>
       </div>
     </div>
@@ -113,7 +120,7 @@ const selectLanguage = (newLocale) => {
   const pathSegments = currentPath.split('/').filter(Boolean)
   
   // 如果当前路径有语言前缀，移除它
-  if (pathSegments.length > 0 && ['en', 'de', 'fr'].includes(pathSegments[0])) {
+  if (pathSegments.length > 0 && ['en', 'de', 'fr', 'pt'].includes(pathSegments[0])) {
     pathSegments.shift()
     currentPath = '/' + pathSegments.join('/')
   }

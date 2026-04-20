@@ -6,7 +6,14 @@ import { loadBlogData } from '../data/blog.js'
 import { useLocalizedPath } from '../composables/useLocalizedPath'
 
 // 支持的语言列表
-const supportedLocales = ['en', 'de', 'fr']
+const supportedLocales = ['en', 'de', 'fr', 'pt']
+
+const ogLocaleMap = {
+  en: 'en_US',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  pt: 'pt_BR'
+}
 
 const updateMetaTag = (name, content, attribute = 'name') => {
   if (!content || typeof document === 'undefined') return
@@ -72,8 +79,8 @@ const setSEO = (seo, locale = 'en') => {
   updateMetaTag('og:url', finalSEO.canonical, 'property')
   updateMetaTag('og:type', finalSEO.type, 'property')
   updateMetaTag('og:site_name', 'Hellmart Game', 'property')
-  // Open Graph locale (格式: en_US, de_DE, fr_FR)
-  const ogLocale = locale === 'en' ? 'en_US' : locale === 'de' ? 'de_DE' : 'fr_FR'
+  // Open Graph locale (格式: en_US, de_DE, fr_FR, pt_BR)
+  const ogLocale = ogLocaleMap[locale] || 'en_US'
   updateMetaTag('og:locale', ogLocale, 'property')
   // 清理旧的 alternate locale 标签
   if (typeof document !== 'undefined') {
@@ -82,7 +89,7 @@ const setSEO = (seo, locale = 'en') => {
   }
   // 添加其他语言的 alternate locale
   supportedLocales.filter(l => l !== locale).forEach(altLocale => {
-    const altOgLocale = altLocale === 'en' ? 'en_US' : altLocale === 'de' ? 'de_DE' : 'fr_FR'
+    const altOgLocale = ogLocaleMap[altLocale] || 'en_US'
     updateMetaTag('og:locale:alternate', altOgLocale, 'property')
   })
   updateMetaTag('twitter:card', 'summary_large_image', 'name')
